@@ -1,0 +1,112 @@
+[
+    {
+        "model-name": "tblestudent",
+        "resource-file": "tblestudents.json",
+        "table-name": "tblestudents"
+    },
+    {
+        "model-name": "table__course__g__student",
+        "resource-file": "table__course__g__students.json",
+        "table-name": "table__course__g__students"
+    },
+    {
+        "model-name": "table__course__s__students",
+        "resource-file": "table__course__s__students.json",
+        "table-name": "table__course__s__students"
+    },
+    {
+        "model-name": "tblstudents",
+        "resource-file": "tblstudents.json",
+        "table-name": "tblstudents"
+    },
+    {
+        "model-name": "attendance_1",
+        "resource-file": "attendance_1s.json",
+        "table-name": "attendance_1s"
+    },
+    {
+        "model-name": "attendance_1_1",
+        "resource-file": "attendance_1_1s.json",
+        "table-name": "attendance_1_1s"
+    },
+    {
+        "model-name": "attendance_1_1_",
+        "resource-file": "attendance_1_1_s.json",
+        "table-name": "attendance_1_1_s"
+    },
+    {
+        "model-name": "attendance_1G",
+        "resource-file": "attendance_1_gs.json",
+        "table-name": "attendance_1_gs"
+    },
+    {
+        "model-name": "attendance_1g",
+        "resource-file": "attendance_1gs.json",
+        "table-name": "attendance_1gs"
+    },
+    {
+        "model-name": "att",
+        "resource-file": "atts.json",
+        "table-name": "atts"
+    },
+    {
+        "model-name": "courses_2",
+        "resource-file": "courses_2s.json",
+        "table-name": "courses_2s"
+    },
+    {
+        "model-name": "rayan",
+        "resource-file": "rayans.json",
+        "table-name": "rayans"
+    },
+    {
+        "model-name": "course_2s",
+        "resource-file": "course_2s.json",
+        "table-name": "course_2s"
+    },
+    {
+        "model-name": "cs_2s",
+        "resource-file": "cs_2s.json",
+        "table-name": "cs_2s"
+    },
+    {
+        "model-name": "atts_1s",
+        "resource-file": "atts_1s.json",
+        "table-name": "atts_1s"
+    },
+    {
+        "model-name": "atts_3s",
+        "resource-file": "atts_3s.json",
+        "table-name": "atts_3s"
+    },
+    {
+        "model-name": "atts_4s",
+        "resource-file": "atts_4s.json",
+        "table-name": "atts_4s"
+    },
+    {
+        "model-name": "atts_4m",
+        "resource-file": "atts_4ms.json",
+        "table-name": "atts_4ms"
+    },
+    {
+        "model-name": "atts_1gs",
+        "resource-file": "atts_1gs.json",
+        "table-name": "atts_1gs"
+    },
+    {
+        "model-name": "atts_3gs",
+        "resource-file": "atts_3gs.json",
+        "table-name": "atts_3gs"
+    },
+    {
+        "model-name": "atts_3ms",
+        "resource-file": "atts_3ms.json",
+        "table-name": "atts_3ms"
+    },
+    {
+        "model-name": "atts_2gs",
+        "resource-file": "atts_2gs.json",
+        "table-name": "atts_2gs"
+    }
+]

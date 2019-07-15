@@ -1,0 +1,601 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\table__course__s__students;
+use Illuminate\Http\Request;
+use App\Models\att4s;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\url;
+use App\Http\Controllers\Controller;
+use Exception;
+use PDF; 
+use Carbon\Carbon;
+
+class Atts4SmController extends Controller
+{
+    public function view($id,Request $request)
+    {
+        $mutable = Carbon::now();
+        
+        $att4s = att4s::paginate(100);
+        $SingleData = att4s::findOrFail(1);
+            
+        $keyword = $request->get('search');
+            
+        $items = DB::table('precentages')
+            ->select('precentage')
+            ->where('Level','=', "2S")->first();
+        
+        $data = table__course__s__students::findOrFail($id);
+        
+        if (!empty($keyword)) {
+                 $att4s = att4s::where('Reg_NO', 'LIKE', "%$keyword%")
+                ->orWhere('Name', 'LIKE', "%$keyword%")  
+                ->paginate(300);
+        }
+        else {
+           $att4s = att4s::paginate(100);
+        }
+        
+             if($id==11){
+             return view('subject table_4_view.Subject1', compact('att4s','items','data', 'SingleData'));
+             }
+             if($id==10){
+             return view('subject table_4_view.Subject2', compact('att4s','items','data','SingleData'));
+             }
+              if($id==9){
+             return view('subject table_4_view.Subject3', compact('att4s','items','data','SingleData'));
+             }
+              if($id==8){
+             return view('subject table_4_view.Subject4', compact('att4s','items','data','SingleData'));
+             }
+              if($id==7){
+             return view('subject table_4_view.Subject5', compact('att4s','items','data','SingleData'));
+             }
+              if($id==6){
+             return view('subject table_4_view.Subject6', compact('att4s','items','data','SingleData'));
+             }
+              if($id==5){
+             return view('subject table_4_view.Subject7', compact('att4s','items','data','SingleData'));
+             }
+              if($id==4){
+             return view('subject table_4_view.Subject8', compact('att4s','items','data','SingleData'));
+             }
+    }
+
+
+    public function attendance_mark($id)
+    {
+        $att4s = att4s::paginate(11);
+        $data = table__course__s__students::findOrFail($id);
+        if($id==11){
+              return view('subject table_4_mark4.subject1', compact('att4s','data'));
+             }
+        if($id==10){
+              return view('subject table_4_mark4.subject2', compact('att4s','data'));
+             }
+        if($id==9){
+              return view('subject table_4_mark4.subject3', compact('att4s','data'));
+             } 
+        if($id==8){
+               return view('subject table_4_mark4.subject4', compact('att4s','data'));
+             }
+        if($id==7){
+               return view('subject table_4_mark4.subject5', compact('att4s','data'));
+             }
+        if($id==6){
+               return view('subject table_4_mark4.subject6', compact('att4s','data'));
+             }
+        if($id==5){
+               return view('subject table_4_mark4.subject7', compact('att4s','data'));
+             }
+        if($id==4){
+               return view('subject table_4_mark4.subject8', compact('att4s','data'));
+             }     
+    }
+
+    public function store(Request $request,$id)
+   {   
+
+    try{
+             if($id==11){
+            DB::table('atts_4s')-> update(['hours'=>$request->name]); 
+
+            
+            DB::table('atts_4s')->update(['nooflectures' => DB::raw('nooflectures +  hours')]);
+           
+            DB::table('atts_4s')->where('attend_mark', '0')->update(['lectureattend' => DB::raw('lectureattend + hours')]);
+        
+            DB::table('atts_4s')->update(['attend_mark' =>'0']);
+             }
+             
+               
+             if($id==10){
+            DB::table('atts_4s')-> update(['hours1'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures1' => DB::raw('nooflectures1 +  hours1')]);
+        
+            DB::table('atts_4s')->where('attend_mark1', '0')->update(['lectureattend1' => DB::raw('lectureattend1 + hours1')]);
+        
+            DB::table('atts_4s')->update(['attend_mark1' =>'0']);
+             }
+             
+             if($id==9){
+            DB::table('atts_4s')-> update(['hours2'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures2' => DB::raw('nooflectures2 +  hours2')]);
+        
+            DB::table('atts_4s')->where('attend_mark2', '0')->update(['lectureattend2' => DB::raw('lectureattend2 + hours2')]);
+        
+            DB::table('atts_4s')->update(['attend_mark2' =>'0']);
+             }
+               
+            if($id==8){
+             DB::table('atts_4s')-> update(['hours3'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures3' => DB::raw('nooflectures3 +  hours3')]);
+        
+            DB::table('atts_4s')->where('attend_mark3', '0')->update(['lectureattend3' => DB::raw('lectureattend3 + hours3')]);
+        
+            DB::table('atts_4s')->update(['attend_mark3' =>'0']);
+             }
+             
+            if($id==7){
+            DB::table('atts_4s')-> update(['hours4'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures4' => DB::raw('nooflectures4 +  hours4')]);
+        
+            DB::table('atts_4s')->where('attend_mark4', '0')->update(['lectureattend4' => DB::raw('lectureattend4 + hours4')]);
+        
+            DB::table('atts_4s')->update(['attend_mark4' =>'0']);
+             }
+             
+            if($id==6){
+            DB::table('atts_4s')-> update(['hours5'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures5' => DB::raw('nooflectures5 +  hours5')]);
+        
+            DB::table('atts_4s')->where('attend_mark5', '0')->update(['lectureattend5' => DB::raw('lectureattend5 + hours5')]);
+        
+            DB::table('atts_4s')->update(['attend_mark5' =>'0']);
+             }
+             
+            if($id==5){
+            DB::table('atts_4s')-> update(['hours6'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures6' => DB::raw('nooflectures6 +  hours6')]);
+        
+            DB::table('atts_4s')->where('attend_mark6', '0')->update(['lectureattend6' => DB::raw('lectureattend6 + hours6')]);
+        
+            DB::table('atts_4s')->update(['attend_mark6' =>'0']);
+             }
+             
+            if($id==4){
+            DB::table('atts_4s')-> update(['hours7'=>$request->name]); 
+           
+            DB::table('atts_4s')->update(['nooflectures7' => DB::raw('nooflectures7 +  hours7')]);
+        
+            DB::table('atts_4s')->where('attend_mark7', '0')->update(['lectureattend7' => DB::raw('lectureattend7 + hours7')]);
+        
+            DB::table('atts_4s')->update(['attend_mark7' =>'0']);
+             }
+           
+            return redirect::to(url::previous())
+            ->with('success_message', 'Attendance Sheet successfully added!');   
+                 
+             
+             
+        } catch (Exception $exception) {
+                return back()->withInput()
+                ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request!']);
+        }
+   }
+
+   public function edit($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark==0){
+                $att4s->attend_mark=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 && $id>=11) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+
+    public function edit1s($id)
+    {
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark1==0){
+                $att4s->attend_mark1=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark1=0;
+                $att4s->save();
+            }
+        
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+
+    public function edit2s($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark2==0){
+                $att4s->attend_mark2=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark2=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+
+    public function edit3s($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark3==0){
+                $att4s->attend_mark3=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark3=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+
+    public function edit4s($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark4==0){
+                $att4s->attend_mark4=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark4=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+
+    public function edit5s($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark5==0){
+                $att4s->attend_mark5=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark5=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)){    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+    
+       //function for mark attendance for subject7
+    public function edit6s($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark6==0){
+                $att4s->attend_mark6=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark6=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+    
+    
+       //function for mark attendance for subject8
+    public function edit7s($id)
+    {        
+        $att4s = att4s::findOrFail($id);    
+            if($att4s->attend_mark7==0){
+                $att4s->attend_mark7=1;
+                $att4s->save(); 
+            }  
+            else{
+                $att4s->attend_mark7=0;
+                $att4s->save();
+            }
+            
+            
+            if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
+            return redirect::to(url::previous() );
+        }
+        else{
+            return redirect::to(url::previous() ."#r");
+        }
+    }
+
+   
+    public function reset1()
+    {
+        $level = DB::table('Level')
+          ->where('id','=', "1")->first();
+           
+          $level1 = DB::table('Level')
+         ->where('id','=', "2")->first();
+          
+          $level2 = DB::table('Level')
+         ->where('id','=', "3")->first();
+          
+          $level3 = DB::table('Level')
+          ->where('id','=', "4")->first();
+
+          $items = DB::table('precentages')
+             ->select('precentage')
+             ->where('Level','=', "2S")->first();
+         
+          $tableCourseSStudentsObjects = table__course__s__students::where('Level', '=', "4S") ->latest()->paginate(60);
+
+            DB::table('atts_4s')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend4' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend5' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend6' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend7' => 0]);
+        
+             return view('Reset_Table/Update_Semester3', compact('tableCourseSStudentsObjects','items','level','level1','level2','level3'));
+    }
+    
+     public function reset($id)
+    {
+          $items = DB::table('precentages')
+             ->select('precentage')
+             ->where('Level','=', "2S")->first();
+          
+          $tableCourseSStudentsObjects  = table__course__s__students::where('Level', '=', "4S") ->latest()->paginate(60);
+          
+        if($id==11){
+            DB::table('atts_4s')
+               ->update(['nooflectures' => 0]);
+               DB::table('atts_4s')
+              ->update(['lectureattend' => 0]);
+               DB::table('atts_4s')
+                ->update(['hours' => 0]);           
+             }
+        if($id==10){
+            DB::table('atts_4s')
+              ->update(['nooflectures1' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend1' => 0]);
+               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             }
+      
+        if($id==9){
+            DB::table('atts_4s')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend2' => 0]);
+               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             } 
+        if($id==8){
+            DB::table('atts_4s')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend3' => 0]);
+-               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             }
+        if($id==7){
+           DB::table('atts_4s')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend4' => 0]);
+               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             }
+        if($id==6){
+        DB::table('atts_4s')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend5' => 0]);
+               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             }
+        if($id==5){
+              DB::table('atts_4s')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend6' => 0]);
+               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             }
+        if($id==4){
+            DB::table('atts_4s')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend7' => 0]);
+               DB::table('atts_4s')
+               ->update(['hours' => 0]);
+             } 
+             
+          $level = DB::table('Level')
+          ->where('id','=', "1")->first();
+           
+          $level1 = DB::table('Level')
+         ->where('id','=', "2")->first();
+          
+          $level2 = DB::table('Level')
+         ->where('id','=', "3")->first();
+          
+          $level3 = DB::table('Level')
+          ->where('id','=', "4")->first();
+
+            
+             return view('Reset_Table/Update_Semester3', compact('tableCourseSStudentsObjects','items','level','level1','level2','level3'));
+    }
+
+    
+
+    public function Subject_Level()
+    {     
+            $atts = att4s::paginate(100);
+            $items = DB::table('precentages')
+             ->select('precentage')
+             ->where('Level','=', "2S")->first();
+            
+            $data=DB::table('table__course__s__students')
+                    ->where('id','=', "11")->first();
+            
+            $data1=DB::table('table__course__s__students')
+                    ->where('id','=', "10")->first();
+               
+            $data2=DB::table('table__course__s__students')
+                    ->where('id','=', "9")->first();   
+            
+            $data3=DB::table('table__course__s__students')
+                    ->where('id','=', "8")->first();
+            
+            $data4=DB::table('table__course__s__students')
+                    ->where('id','=', "7")->first();
+           
+            $data5=DB::table('table__course__s__students')
+                    ->where('id','=', "6")->first();
+            
+            $data6=DB::table('table__course__s__students')
+                    ->where('id','=', "5")->first();
+            
+            $data7=DB::table('table__course__s__students')
+                    ->where('id','=', "4")->first();
+            
+            $level1 = DB::table('Level')
+                    ->where('id','=', "4")->first();
+            
+            
+            $SingleData = att4s::findOrFail(1);
+        
+            
+                 $pdf = PDF::loadView('Summery.table_2_sub.Level', compact('atts','items','SingleData','data','data1','data2','data3','data4','data5','data6','data7','level1'));
+                 return $pdf->download('Summmary Level.pdf');
+     }  
+     
+     public function Backup()
+     {
+        $atts = att4s::paginate(100);
+        $items = DB::table('precentages')
+         ->select('precentage')
+         ->where('Level','=', "2S")->first();
+        
+        $data=DB::table('table__course__s__students')
+                ->where('id','=', "11")->first();
+        
+        $data1=DB::table('table__course__s__students')
+                ->where('id','=', "10")->first();
+           
+        $data2=DB::table('table__course__s__students')
+                ->where('id','=', "9")->first();   
+        
+        $data3=DB::table('table__course__s__students')
+                ->where('id','=', "8")->first();
+        
+        $data4=DB::table('table__course__s__students')
+                ->where('id','=', "7")->first();
+       
+        $data5=DB::table('table__course__s__students')
+                ->where('id','=', "6")->first();
+        
+        $data6=DB::table('table__course__s__students')
+                ->where('id','=', "5")->first();
+        
+        $data7=DB::table('table__course__s__students')
+                ->where('id','=', "4")->first();
+        
+        $leve = DB::table('Level')
+                    ->where('id','=', "4")->first();
+            
+        
+        $SingleData = att4s::findOrFail(1);   
+       
+        
+        $pdf = PDF::loadView('BackUp.table_2.Level2', compact('atts','items','SingleData','data',
+                'data1','data2','data3','data4','data5','data6','data7','leve'))
+                ->download('BackUP Level.pdf');
+        return view('BackUp.table_2.Level2',compact('atts','items','data','data1','data2',
+                'data3','data4','data5','data6','data7','SingleData','leve'));
+     }
+}

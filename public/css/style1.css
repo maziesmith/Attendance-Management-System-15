@@ -1,0 +1,79 @@
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+    .ribbon span {
+        font-size: 10px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        line-height: 20px;
+        transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: #F62459;
+        background: linear-gradient(#ff89b1 0%, #ff006e 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px;
+        right: -21px;
+
+    }
+
+        .ribbon span::before {
+            content: '';
+            position: absolute;
+            left: 0%;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #F62459;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #F62459;
+        }
+
+        .ribbon span::after {
+            content: '';
+            position: absolute;
+            right: 0%;
+            top: 100%;
+            z-index: -1;
+            border-right: 3px solid #F62459;
+            border-left: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #F62459;
+        }
+
+
+#inventory .card:hover {
+    transition: all 0.3s ease;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+
+
+#inventory .view-btn {
+    background-color: #e6de08;
+    margin: -25px 0 0 0;
+    border-radius: 0 0 0 0;
+    font-size: 14px;
+    border: #e6de08;
+    color: #000;
+
+}
+
+
+    #inventory .btn:hover {
+        background-color: #ff4444;
+        color: #fff;
+        border: 2px solid #ff4444;
+        transition: all 0.3s ease;
+        box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    }

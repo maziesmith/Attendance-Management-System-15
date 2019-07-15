@@ -1,0 +1,15 @@
+.lisitemap-section ul>li {
+    padding: 8px;
+    font-size: 18px;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    list-style: none;
+    margin: 1px;
+}
+.lisitemap-section li>a {
+    color: #fff;
+}
+.lisitemap-section li>a:hover {
+    color: #29ad3a;
+}
