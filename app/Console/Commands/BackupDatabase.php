@@ -23,19 +23,12 @@ class BackupDatabase extends Command
 
     public function handle()
     {
-       //  $mysqlPath = "D:\\xampp/mysql/bin/mysqldump";
        $date = Carbon::now()->format('Y-m-d_h-i');
-       $user =env('DB_USERNAME');
-       $password = env('DB_PASSWORD');
-       $database = env('DB_DATABASE');
        
-        //$command = "c:/xampp/mysql/bin/mysqldump -u $user -p$password $database > C:\backup\{$date}.sql";
-       //$command = "C:\\xampp/mysql/bin/mysqldump --user={$user} -p{$password} {$database} > C:\backup\{$date}.sql";
-       $command = "C:\\xampp/mysql/bin>mysqldump -u root -p project >C:\backup\project.sql";
-        $process = new Process($command);
-       $process->start();
-        
-        
+       $command = "C:/xampp/mysql/bin/mysqldump -u root -p project >C:\backup\Attendance_System_Backup.sql";
        
+       $process = new Process($command);
+       $process->mustRun();
+        
     }
 }
