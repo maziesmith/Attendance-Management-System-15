@@ -237,13 +237,15 @@ use PDF;
    //function for mark attendance for subject1
   public function ray(Request $request)
     {
-       $record = $request->all();
-       dd($record[2]);
-} 
-              
-       
-    
-    
+     $record = $request->all();
+      for ($x = 0; $x <= sizeof($record); $x++){    
+          $s= $request-> my_checkbox[$x];
+          DB::table('atts')->where('id', $s)->update(['attend_mark'=>1]);
+        }
+     
+        return redirect::to(url::previous());
+     }
+         
     //function for mark attendance for subject2
     public function edit1s($id)
     {

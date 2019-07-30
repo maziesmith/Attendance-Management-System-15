@@ -68,7 +68,7 @@
                             
                             <td>
                                
-                                <input type="checkbox"  name="my_checkbox[]"  value="{{$att->Reg_No}}">
+                                <input type="checkbox"  name="my_checkbox[]"  value="{{$att->id}}">
                                      </form>
                             </td>
                            
