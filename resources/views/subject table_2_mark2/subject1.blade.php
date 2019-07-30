@@ -63,16 +63,9 @@
                             <td>{{ $att->name }}</td>
                             
                             <td>
-                            @if( $att->attend_mark )
-                                 
-                            <a href="{{ route('atts.att.edit', $att->id ) }}"  title="change the attendance" ><button class="btn btn-danger "><i class="fa fa-arrow-left" aria-hidden="true"></i> Not Attended </button></a> 
-                                
-                            @else
-                              <a href="{{ route('atts.att.edit', $att->id ) }}"  title="change the attendance" ><button class="btn btn-success "><i class="fa fa-arrow-left" aria-hidden="true"></i>Attended   </button></a> 
-                                
-                            @endif 
-                            
-                   
+                                <form class="form-horizontal" method="post" action="{{ route('atts.att.edit', $att->id ) }}">
+                                <input type="checkbox"  name="my_checkbox"  value="1">
+                                     </form>
                             </td>
                            
                             
