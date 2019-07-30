@@ -29,7 +29,6 @@ Route::get('/updateS', function () {
 });
 
 
-
 //--------------------------ROUTE FOR UPDATE THE LEVEL----------------------------------
 Route::group(
     [
@@ -1415,3 +1414,4 @@ Route::group(
 
 });
 
+Route::post('/attendance_mark', 'AttsController@ray');

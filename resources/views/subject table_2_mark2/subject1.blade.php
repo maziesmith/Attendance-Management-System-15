@@ -27,7 +27,6 @@
         </div>
     @endif
 
-   
     <table class="table">
                     <thead>
                         <tr class="tr btn-dark">
@@ -36,7 +35,8 @@
     <th>Course Name :{{$data->name}}</th>
 
      </tr>
-                    </thead>  </table>
+                    </thead>  </table> 
+
 
     <div class="panel panel-default">
 
@@ -44,7 +44,11 @@
 
         <div class="panel-body panel-body-with-table">
             <div class="table-responsive">
-
+ 
+                
+                <form  method="post" action="/attendance_mark">
+                   @csrf
+                   
                 <table class="table">
                     <thead>
                         <tr>
@@ -63,8 +67,8 @@
                             <td>{{ $att->name }}</td>
                             
                             <td>
-                                <form class="form-horizontal" method="post" action="{{ route('atts.att.edit', $att->id ) }}">
-                                <input type="checkbox"  name="my_checkbox"  value="1">
+                               
+                                <input type="checkbox"  name="my_checkbox[]"  value="{{$att->Reg_No}}">
                                      </form>
                             </td>
                            
@@ -81,9 +85,8 @@
                       
                     </tbody>
                 </table>
-                   
-   
-                
+                      <button type="submit"> save</button>   
+                 </form>            
             </div>
         </div>
          

@@ -235,15 +235,13 @@ use PDF;
     // -------------------------------_ MARKING THE ATTENDANCE-------------------------------------------------
    
    //function for mark attendance for subject1
-  public function edit($id,Request $request)
+  public function ray(Request $request)
     {
-            $att = att::findOrFail($id);               
-            if (  $request->has('my_checkbox')) {
-                return url('/home');
-            }
-           
-          
-    }    
+       $record = $request->all();
+       dd($record[2]);
+} 
+              
+       
     
     
     //function for mark attendance for subject2
