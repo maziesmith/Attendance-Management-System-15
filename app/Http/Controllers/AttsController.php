@@ -105,7 +105,7 @@ use PDF;
     //attenadnce marking view table_2 subject
     public function attendance_mark($id)
     {
-        $atts = att::paginate(11);
+        $atts = att::paginate(150);
         $data = table__course__s__students::findOrFail($id);
         if($id==35){
               return view('subject table_2_mark2.subject1', compact('atts','data'));
@@ -235,26 +235,15 @@ use PDF;
     // -------------------------------_ MARKING THE ATTENDANCE-------------------------------------------------
    
    //function for mark attendance for subject1
-    public function edit($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark==0){
-                $att->attend_mark=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark=0;
-                $att->save();
+  public function edit($id,Request $request)
+    {
+            $att = att::findOrFail($id);               
+            if (  $request->has('my_checkbox')) {
+                return url('/home');
             }
-            
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
-        }
-        else{
-            return redirect::to(url::previous() ."#r");
-        }
-    }
+           
+          
+    }    
     
     
     //function for mark attendance for subject2

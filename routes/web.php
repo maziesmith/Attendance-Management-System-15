@@ -42,7 +42,7 @@ Route::group(
 
 
 //--------------------------ROUTE FOR USER_STUDENT----------------------------------
-
+ 
 //View part of studtent user to their attendance 
 Route::group(
     [
