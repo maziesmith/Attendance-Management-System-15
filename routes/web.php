@@ -29,7 +29,6 @@ Route::get('/updateS', function () {
 });
 
 
-
 //--------------------------ROUTE FOR UPDATE THE LEVEL----------------------------------
 Route::group(
     [
@@ -833,6 +832,13 @@ Route::group(
     Route::get('table_2_subject/{tableCourseSStudents}', 'AttsController@view')
          ->name('2s_sub1.2s_sub1.index_2S_sub1')
          ->where('id', '[0-9]+');
+
+         Route::get('/{atts}/edit','AttsController@edit')
+         ->name('madhu')
+         ->where('id', '[0-9]+');
+
+         Route::get('/table_2_subject/35', 'AttsController@view')
+         ->name('return');
  
      
     //get summary for Level
@@ -1409,9 +1415,14 @@ Route::group(
          ->name('atts.atts.update')
          ->where('id', '[0-9]+');
 
+         Route::put('atts/{atts}', 'AttsController@updateS')
+         ->name('atts.atts.updateS')
+         ->where('id', '[0-9]+');
+
     Route::delete('/atts/{atts}','AttsController@destroy')
          ->name('atts.atts.destroy')
          ->where('id', '[0-9]+');
 
 });
 
+Route::post('/attendance_mark', 'AttsController@ray');

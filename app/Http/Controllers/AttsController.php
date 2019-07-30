@@ -235,14 +235,10 @@ use PDF;
     // -------------------------------_ MARKING THE ATTENDANCE-------------------------------------------------
    
    //function for mark attendance for subject1
-  public function edit($id,Request $request)
+  public function ray(Request $request)
     {
-            $att = att::findOrFail($id);               
-            if (  $request->has('my_checkbox')) {
-                return url('/home');
-            }
-           
-          
+       $record = $request->all();
+       dd(sizeof($record));       
     }    
     
     
@@ -744,6 +740,42 @@ use PDF;
         return view('BackUp.table_2.Level2',compact('atts','items','data','data1','data2',
                 'data3','data4','data5','data6','data7','SingleData','leve'));
      }
+
+
+
+     public function edit($id)
+    {
+        $atts = atts::findOrFail($id);
+        
+
+        return view('atts.edit', compact('atts'));
+    }
+    public function updateS($id, Request $request)
+    {
+        
+            
+            $data = $this->getDataS($request);
+            
+            $atts = atts::findOrFail($id);
+            $atts->update($data);
+
+            return redirect()->route('return')
+                             ->with('success_message', 'Atts was successfully updated!');
+
+        
+               
+    }
+    protected function getDataS(Request $request)
+    {
+        $rules = [
+            'lectureattend' => 'required|numeric|min:-2147483648|max:2147483647',
+            
+        ];
+
+        $data = $request->validate($rules);
+
+        return $data;
+    }
 
  }
  

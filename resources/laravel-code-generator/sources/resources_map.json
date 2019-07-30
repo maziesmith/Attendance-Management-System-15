@@ -45,11 +45,6 @@
         "table-name": "attendance_1gs"
     },
     {
-        "model-name": "att",
-        "resource-file": "atts.json",
-        "table-name": "atts"
-    },
-    {
         "model-name": "courses_2",
         "resource-file": "courses_2s.json",
         "table-name": "courses_2s"
@@ -108,5 +103,10 @@
         "model-name": "atts_2gs",
         "resource-file": "atts_2gs.json",
         "table-name": "atts_2gs"
+    },
+    {
+        "model-name": "atts",
+        "resource-file": "atts.json",
+        "table-name": "atts"
     }
 ]
