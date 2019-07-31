@@ -3,9 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/manager/resources/views/Reset_table/SemesterUpdateFirstPage.blade.php</file>
-            <file>file:/C:/xampp/htdocs/manager/app/Http/Controllers/Atts2gsController.php</file>
-            <file>file:/C:/xampp/htdocs/manager/resources/views/Reset_table/Update_New_Year.blade.php</file>
+            <file>file:/C:/xampp/htdocs/manager/app/Http/Controllers/AttsController.php</file>
+            <file>file:/C:/xampp/htdocs/manager/resources/views/subject%20table_2_mark2/subject1.blade.php</file>
         </group>
     </open-files>
 </project-private>
