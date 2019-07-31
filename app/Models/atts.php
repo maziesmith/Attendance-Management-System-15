@@ -33,13 +33,56 @@ class atts extends Model
      * @var array
      */
     protected $fillable = [
-                  'Subjectcode',
                   'Reg_No',
                   'name',
                   'nooflectures',
                   'lectureattend',
                   'hours',
-                  'date'
+                  'subcode',
+                  'precentage',
+                  'attend_mark',
+                  'nooflectures1',
+                  'lectureattend1',
+                  'hours1',
+                  'attend_mark1',
+                  'subcode1',
+                  'precentage1',
+                  'nooflectures2',
+                  'lectureattend2',
+                  'hours2',
+                  'subcode2',
+                  'precentage2',
+                  'attend_mark2',
+                  'nooflectures3',
+                  'lectureattend3',
+                  'hours3',
+                  'subcode3',
+                  'precentage3',
+                  'attend_mark3',
+                  'nooflectures4',
+                  'lectureattend4',
+                  'hours4',
+                  'subcode4',
+                  'precentage4',
+                  'attend_mark4',
+                  'nooflectures5',
+                  'lectureattend5',
+                  'hours5',
+                  'subcode5',
+                  'precentage5',
+                  'attend_mark5',
+                  'nooflectures6',
+                  'lectureattend6',
+                  'hours6',
+                  'subcode6',
+                  'precentage6',
+                  'attend_mark6',
+                  'nooflectures7',
+                  'lectureattend7',
+                  'hours7',
+                  'subcode7',
+                  'precentage7',
+                  'attend_mark7'
               ];
 
     /**
@@ -57,16 +100,6 @@ class atts extends Model
     protected $casts = [];
     
 
-    /**
-     * Set the date.
-     *
-     * @param  string  $value
-     * @return void
-     */
-    public function setDateAttribute($value)
-    {
-        $this->attributes['date'] = !empty($value) ? \DateTime::createFromFormat($this->getDateFormat(), $value) : null;
-    }
 
     /**
      * Get created_at in array format
@@ -75,18 +108,6 @@ class atts extends Model
      * @return array
      */
     public function getCreatedAtAttribute($value)
-    {
-        return \DateTime::createFromFormat('j/n/Y g:i A', $value);
-
-    }
-
-    /**
-     * Get date in array format
-     *
-     * @param  string  $value
-     * @return array
-     */
-    public function getDateAttribute($value)
     {
         return \DateTime::createFromFormat('j/n/Y g:i A', $value);
 

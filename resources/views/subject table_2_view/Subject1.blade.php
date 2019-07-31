@@ -57,6 +57,7 @@
                             
                             <th>Lecture attend</th>
                             <th>Percentage</th>
+                            <th>Edit</th>
                          
                         </tr>
                     </thead>
@@ -81,6 +82,26 @@
                            
                             <td>{{ $att->lectureattend }}</td>
                             <td style="background: ">{{ $att->precentage }}%</td>
+
+                            <td>
+
+                                <form method="POST" action="#" accept-charset="UTF-8">
+                                <input name="_method" value="DELETE" type="hidden">
+                                {{ csrf_field() }}
+
+                                   
+                                       <a href="{{ route('madhu', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
+                                        </a>
+
+                                        
+                                    </div>
+
+                                </form>
+                                
+                            </td>
+
+
          @endif  
    
 
