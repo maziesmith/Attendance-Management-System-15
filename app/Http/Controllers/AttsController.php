@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 namespace App\Http\Controllers;
 use App\Models\atts;
@@ -143,6 +142,14 @@ use PDF;
     try{
              if($id==35){
             DB::table('atts')-> update(['hours'=>$request->name]); 
+            
+            DB::table('atts')-> update(['hall'=>$request->hall]);
+
+            DB::table('atts')-> update(['date'=>$request->date]);
+
+            DB::table('atts')-> update(['Start_Time'=>$request->ST]);
+
+            DB::table('atts')-> update(['End_Time'=>$request->ET]);
             
             DB::table('atts')->update(['nooflectures' => DB::raw('nooflectures +  hours')]);
            
