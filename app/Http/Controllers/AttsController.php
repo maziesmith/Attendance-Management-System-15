@@ -143,6 +143,14 @@ use PDF;
              if($id==35){
             DB::table('atts')-> update(['hours'=>$request->name]); 
             
+            DB::table('atts')-> update(['hall'=>$request->hall]);
+
+            DB::table('atts')-> update(['date'=>$request->date]);
+
+            DB::table('atts')-> update(['Start_Time'=>$request->ST]);
+
+            DB::table('atts')-> update(['End_Time'=>$request->ET]);
+            
             DB::table('atts')->update(['nooflectures' => DB::raw('nooflectures +  hours')]);
            
             DB::table('atts')->where('attend_mark', '0')->update(['lectureattend' => DB::raw('lectureattend + hours')]);
