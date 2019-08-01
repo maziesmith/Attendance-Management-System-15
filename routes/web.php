@@ -1100,6 +1100,11 @@ Route::delete('/userPermission/{id}','SetUserPermissionController@destroy')->mid
 Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 
 
+
+
+
+Route::post('/STAdminView','adminStudentViewController@profileview');
+Route::resource('/adminStudentView','adminStudentViewController');
    });  
 Route::group(
 [
