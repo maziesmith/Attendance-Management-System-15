@@ -41,6 +41,15 @@
         <h2>Admin Panel</h2>
     </div>
     <ul class="row">
+
+    <li class="col-12 col-md-6 col-lg-6">
+          <div class="cnt-block equal-hight" style="height: 100px;">
+            
+            <h3><a href="{{ url('/adminStudentView') }}">Individual Student Attendance</a></h3>
+            
+          </div>
+      </li>
+
       <li class="col-12 col-md-6 col-lg-6">
           
           
@@ -134,6 +143,18 @@
             @foreach($info as $d1)
             {{ $d1->name }}
             @endforeach
+
+            @foreach($inf as $d1)
+            {{ $d1->name }}
+            @endforeach
+
+            @foreach($in as $d1)
+            {{ $d1->name }}
+            @endforeach
+
+            @foreach($i as $d1)
+            {{ $d1->name }}
+            @endforeach
     
             </a></h3>
             
@@ -159,6 +180,18 @@
             @endforeach
 
             @foreach($info as $d1)
+            {{ $d1->Reg_No }}
+            @endforeach
+
+            @foreach($inf as $d1)
+            {{ $d1->Reg_No }}
+            @endforeach
+
+            @foreach($in as $d1)
+            {{ $d1->Reg_No }}
+            @endforeach
+
+            @foreach($i as $d1)
             {{ $d1->Reg_No }}
             @endforeach
         
