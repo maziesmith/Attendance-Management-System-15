@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Models\atts;
 use App\Models\att;
 use App\Models\table__course__s__students;
