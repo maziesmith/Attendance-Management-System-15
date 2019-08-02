@@ -1,15 +1,11 @@
-
 <?php
 
 Route::group(['middleware' => ['web']], function() {
-
      
  //all route in log in part 
 Auth::routes();  
 
-
 //--------------------------ROUTE FOR SINGLE PAGE----------------------------------   
-
 
 // welcome page root    
 Route::get('/', function () {
@@ -1399,6 +1395,10 @@ Route::group(
     'prefix' => 'atts',
 ], function () {
 
+       Route::get('/{atts}/edit','AttsController@editStudent')
+         ->name('atts.atts.edit')
+         ->where('id', '[0-9]+');
+    
     Route::get('/', 'AttsController@index')
          ->name('atts.atts.index');
 
@@ -1409,20 +1409,18 @@ Route::group(
          ->name('atts.atts.show')
          ->where('id', '[0-9]+');
 
-    Route::get('/{atts}/edit','AttsController@editStudent')
-         ->name('atts.atts.edit')
-         ->where('id', '[0-9]+');
 
     Route::post('/', 'AttsController@storeStudent')
          ->name('atts.atts.store');
                
-    Route::put('atts/{atts}', 'AttsController@update')
+    Route::put('att/{atts}', 'AttsController@update')
          ->name('atts.atts.update')
          ->where('id', '[0-9]+');
-
-         Route::put('atts/{atts}', 'AttsController@updateS')
-         ->name('atts.atts.updateS')
-         ->where('id', '[0-9]+');
+    
+    Route::post('/', 'AttsController@storeS')
+         ->name('atts.atts.store');
+               
+     
 
     Route::delete('/atts/{atts}','AttsController@destroy')
          ->name('atts.atts.destroy')
@@ -1431,3 +1429,17 @@ Route::group(
 });
 
 Route::post('/attendance_mark', 'AttsController@ray');
+
+
+Route::group(
+[
+    'prefix' => 'edit',
+], function () {
+      Route::put('att/{atts}', 'AttsController@updateS')
+         ->name('atts.atts.updateS')
+         ->where('id', '[0-9]+');
+      
+       Route::get('/{atts}/edit','AttsController@editS')
+         ->name('madhu')
+         ->where('id', '[0-9]+');
+});
