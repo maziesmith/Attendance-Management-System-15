@@ -28,10 +28,10 @@
                 </ul>
             @endif
 
-            <form method="POST" action="{{ route('atts.atts.update', $atts->id) }}" id="edit_atts_form" name="edit_atts_form" accept-charset="UTF-8" class="form-horizontal">
+            <form method="POST" action="{{ route('atts.atts.updateS', $atts->id) }}" id="edit_atts_form" name="edit_atts_form" accept-charset="UTF-8" class="form-horizontal">
             {{ csrf_field() }}
             <input name="_method" type="hidden" value="PUT">
-            @include ('atts.form', [
+            @include ('atts.formS', [
                                         'atts' => $atts,
                                       ])
 

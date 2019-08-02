@@ -65,6 +65,15 @@
                         @foreach($info as $data1)
                         {{ $data1->name }}
                         @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->name }}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->name }}
+                        @endforeach
+                        @foreach($i as $data1)
+                        {{ $data1->name }}
+                        @endforeach
                         
                          </h1>
                         <p class="mbr-fonts-style text1 mbr-text display-6"> 
@@ -84,6 +93,15 @@
                         {{ $data1->Reg_No }}
                         @endforeach
                         @foreach($info as $data1)
+                        {{ $data1->Reg_No }}
+                        @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->Reg_No }}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->Reg_No }}
+                        @endforeach
+                        @foreach($i as $data1)
                         {{ $data1->Reg_No }}
                         @endforeach
                         
@@ -122,6 +140,15 @@
                         @foreach($info as $data1)
                         {{ $data1->precentage}}
                         @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage}}
+                        @endforeach
+                        @foreach($i as $data1)
+                        {{ $data1->precentage}}
+                        @endforeach
                         %
                         </p></h1>
                     </div>
@@ -156,6 +183,15 @@
                         {{ $data1->precentage1}}
                         @endforeach
                         @foreach($info as $data1)
+                        {{ $data1->precentage1}}
+                        @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage1}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage1}}
+                        @endforeach
+                        @foreach($i as $data1)
                         {{ $data1->precentage1}}
                         @endforeach
                         
@@ -195,6 +231,15 @@
                         @foreach($info as $data1)
                         {{ $data1->precentage2}}
                         @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage2}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage2}}
+                        @endforeach
+                        @foreach($i as $data1)
+                        {{ $data1->precentage2}}
+                        @endforeach
                         %
                         </p></h1>
                     </div>
@@ -229,6 +274,15 @@
                         {{ $data1->precentage3}}
                         @endforeach
                         @foreach($info as $data1)
+                        {{ $data1->precentage3}}
+                        @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage3}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage3}}
+                        @endforeach
+                        @foreach($i as $data1)
                         {{ $data1->precentage3}}
                         @endforeach
                         %
@@ -267,6 +321,15 @@
                         @foreach($info as $data1)
                         {{ $data1->precentage4}}
                         @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage4}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage4}}
+                        @endforeach
+                        @foreach($i as $data1)
+                        {{ $data1->precentage4}}
+                        @endforeach
                         %
                         </p></h1>
                     </div>
@@ -301,6 +364,15 @@
                         {{ $data1->precentage5}}
                         @endforeach
                         @foreach($info as $data1)
+                        {{ $data1->precentage5}}
+                        @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage5}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage5}}
+                        @endforeach
+                        @foreach($i as $data1)
                         {{ $data1->precentage5}}
                         @endforeach
                         %
@@ -339,6 +411,15 @@
                         @foreach($info as $data1)
                         {{ $data1->precentage6}}
                         @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage6}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage6}}
+                        @endforeach
+                        @foreach($i as $data1)
+                        {{ $data1->precentage6}}
+                        @endforeach
                         %
                         </p></h1>
                     </div>
@@ -372,6 +453,15 @@
                         {{ $data1->precentage7}}
                         @endforeach
                         @foreach($info as $data1)
+                        {{ $data1->precentage7}}
+                        @endforeach
+                        @foreach($inf as $data1)
+                        {{ $data1->precentage7}}
+                        @endforeach
+                        @foreach($in as $data1)
+                        {{ $data1->precentage7}}
+                        @endforeach
+                        @foreach($i as $data1)
                         {{ $data1->precentage7}}
                         @endforeach
                         %
