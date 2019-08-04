@@ -71,12 +71,16 @@
  <tr>
 
          @if( $att->precentage <$items->precentage)                         
-                            <td style="background: red">{{ $att->id }}</td>
-                            <td style="background: red">{{ $att->Reg_No }}</td>
-                            <td style="background: red">{{ $att->name }}</td>
+                            <td style=>{{ $att->id }}</td>
+                            <td style="background: Teal">{{ $att->Reg_No }}</td>
+                            <td style="background: Teal">{{ $att->name }}</td>
                           
-                            <td style="background: red">{{ $att->lectureattend }}</td>
-                            <td style="background: red">{{ $att->precentage }}%</td>
+                            <td style="background: Teal">{{ $att->lectureattend }}</td>
+                            <td style="background: Teal">{{ $att->precentage }}%</td>
+                            
+                               <td>        <a href="{{ route('madhu', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
+                                        </a></td>
                                 
          @else
                             <td>{{ $att->id }}</td>

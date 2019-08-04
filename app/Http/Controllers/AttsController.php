@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Models\atts;
 use App\Models\att;
 use App\Models\table__course__s__students;
@@ -142,14 +144,7 @@ use PDF;
     try{
              if($id==35){
             DB::table('atts')-> update(['hours'=>$request->name]); 
-            
-            DB::table('atts')-> update(['hall'=>$request->hall]);
 
-            DB::table('atts')-> update(['date'=>$request->date]);
-
-            DB::table('atts')-> update(['Start_Time'=>$request->ST]);
-
-            DB::table('atts')-> update(['End_Time'=>$request->ET]);
             
             DB::table('atts')->update(['nooflectures' => DB::raw('nooflectures +  hours')]);
            
@@ -247,12 +242,13 @@ use PDF;
     {
 
      $record = $request->all();
-      for ($x = 0; $x <= sizeof($record); $x++){    
+     dd(sizeof($record));
+    /*  for ($x = 0; $x <= sizeof($record); $x++){    
           $s= $request-> my_checkbox[$x];
           DB::table('atts')->where('id', $s)->update(['attend_mark'=>1]);
         }
      
-        return redirect::to(url::previous());
+        return redirect::to(url::previous());*/
      }
          
 
@@ -539,6 +535,22 @@ use PDF;
                ->update(['nooflectures7' => 0]);
             DB::table('atts')
                ->update(['lectureattend7' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark6' => 0]);  
+             DB::table('atts')
+               ->update(['attend_mark7' => 0]);
         
              return view('Reset_Table/Update_Semester', compact('tableCourseSStudentsObjects','items','level','level1','level2','level3'));
     }
@@ -757,14 +769,24 @@ use PDF;
 
 
 
-     public function edit($id)
+    public function edit($id)
     {
         $atts = atts::findOrFail($id);
         
 
         return view('atts.edit', compact('atts'));
     }
-    public function updateS($id, Request $request)
+    
+       public function editS($id)
+    {
+        $atts = atts::findOrFail($id);
+        
+
+        return view('atts.editS', compact('atts'));
+    }
+    
+    
+   public function updateS($id, Request $request)
     {
         
             
@@ -789,6 +811,18 @@ use PDF;
         $data = $request->validate($rules);
 
         return $data;
+    }
+     public function storeS(Request $request)
+    {
+        
+            
+            $data = $this->getData($request);
+            
+            atts::create($data);
+
+            return redirect()->route('atts.atts.index')
+                             ->with('success_message', 'Atts was successfully added!');
+
     }
 
  }
