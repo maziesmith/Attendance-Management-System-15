@@ -28,9 +28,14 @@ class att extends Model
                   'precentage',
                   'nooflectures1',
                   'lectureattend1',
+                  'Start_Time1',
+                  'End_Time1',
                   'hours1',
+                  'hall1',
+                  'date1',
                   'attend_mark1',
                   'precentage1'
+                  
                   
               ];
 
@@ -41,5 +46,4 @@ class att extends Model
     protected $casts = [];
     
 
-   
 }
