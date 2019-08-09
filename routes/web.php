@@ -1442,4 +1442,8 @@ Route::group(
        Route::get('/{atts}/edit','AttsController@editS')
          ->name('madhu')
          ->where('id', '[0-9]+');
+       
+         Route::get('/','AttsController@result')
+         ->name('tharu')
+         ->where('id', '[0-9]+');
 });

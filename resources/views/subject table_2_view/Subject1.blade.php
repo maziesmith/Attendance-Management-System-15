@@ -57,8 +57,8 @@
                             <th>No</th>
                             <th>Registration   No</th>
                             <th>Name</th>
-                            
-                            <th>Lecture attend</th>
+                            <th>last submitted attendance </th>
+                            <th>total Lecture attend</th>
                             <th>Percentage</th>
                             <th>Edit</th>
                          
@@ -74,9 +74,9 @@
                             <td style=>{{ $att->id }}</td>
                             <td style="background: Teal">{{ $att->Reg_No }}</td>
                             <td style="background: Teal">{{ $att->name }}</td>
-                          
-                            <td style="background: Teal">{{ $att->lectureattend }}</td>
-                            <td style="background: Teal">{{ $att->precentage }}%</td>
+                            <td>{{ $att->attend_mark }}</td>
+                            <td>{{ $att->lectureattend }}</td>
+                            <td >{{ $att->precentage }}%</td>
                             
                                <td>        <a href="{{ route('madhu', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
@@ -86,7 +86,7 @@
                             <td>{{ $att->id }}</td>
                             <td>{{ $att->Reg_No }}</td>
                             <td>{{ $att->name }}</td>
-                           
+                           <td>{{ $att->attend_mark }}</td>
                             <td>{{ $att->lectureattend }}</td>
                             <td style="background: ">{{ $att->precentage }}%</td>
 
