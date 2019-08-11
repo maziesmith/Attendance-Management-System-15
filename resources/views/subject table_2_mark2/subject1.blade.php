@@ -75,7 +75,7 @@
                                      @endif
                  </form>  
                                      @if( $att->is_saved==1)
-                                            <a href="{{ route('tharu', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
+                                            <a href="{{ route('tharu') }}" class="btn btn-primary" title="Edit Atts">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true">reset</span>
                                         </a> 
                                      @endif
