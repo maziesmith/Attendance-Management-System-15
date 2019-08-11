@@ -21,12 +21,14 @@
     
     <th>Course Code :{{$data->code}}  </th>
     <th>Course Name :{{$data->name}}</th>
+
     <th>date :{{$SingleData->date1}}</th>
     <th>Start_Time :{{$SingleData->Start_Time1}}</th>
     <th>End_Time :{{$SingleData->End_Time1}}</th>
     <th>Hall :{{$SingleData->hall1}}</th>
     <th>No of Lectures :{{$SingleData->nooflectures1}} </th>  
      
+
      </tr>
                     </thead>  </table>
                                                

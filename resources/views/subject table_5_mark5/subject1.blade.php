@@ -106,12 +106,29 @@
                     <thead>
                         <tr class="tr btn-dark">
                            <th>  <form class="form-horizontal" method="post" action="{{ route('hourg.index', $data->id ) }}" >  
-        <label style="text-align: center;  position: relative ; left:3%" ><b>Hours :</b> :</label>
+        {{-- <label style="text-align: center;  position: relative ; left:3%" ><b>Hours :</b> :</label>
         <input type="number"  name="name" placeholder="Enter lecture hours"  name="hour" minlength="1" maxlength="200"  max="10" min="1" required="true"  style="background-color:yellow; text-align: center;  position: relative ; left:3%" >    
        
         
-        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:26%  ">submit the attendance </button>
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:26%  ">submit the attendance </button> --}}
+               
+        <label style="text-align: center;  position: relative ; left:3%" ><b>Date :</b> :</label>
+        <input type="date" placeholder="YYYY-MM-DD"  name="date" required="true"  pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" style="text-align: center;  position: relative ; left:3%" >                                                
+    <label style="text-align: center;  position: relative ; left:3%" ><b>Start Time :</b> :</label>
+        <input type="time" name="ST" required="true"  style="text-align: center;  position: relative ; left:3%" >
+    <label style="text-align: center;  position: relative ; left:3%" ><b>End Time :</b> :</label>
+        <input type="time"  name="ET" required="true"  style="text-align: center;  position: relative ; left:3%" >
+    <label style="text-align: center;  position: relative ; left:3%" ><b>Hall :</b> :</label>
+        <select value="hall" name = "hall" style="text-align: center;  position: relative ; left:3%">
+            <option value = "CUL-1"> CUL-1 </option>
+            <option value = "CUL-2"> CUL-2 </option>
+            <option value = "Lab-1"> Lab-1 </option>
+            <option value = "P1"> P1 </option>
+            <option value = "other"> other </option>
+        </select> 
+        
+        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:15%  ">submit the attendance </button>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </form> </th>
    
                           
