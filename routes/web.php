@@ -1429,7 +1429,13 @@ Route::group(
 });
 
 Route::post('/attendance_mark', 'AttsController@ray');
-
+Route::post('/attendance_mark1', 'AttsController@ray1');
+Route::post('/attendance_mark2', 'AttsController@ray2');
+Route::post('/attendance_mark3', 'AttsController@ray3');
+Route::post('/attendance_mark4', 'AttsController@ray4');
+Route::post('/attendance_mark5', 'AttsController@ray5');
+Route::post('/attendance_mark6', 'AttsController@ray6');
+Route::post('/attendance_mark7', 'AttsController@ray7');
 
 Route::group(
 [
@@ -1443,7 +1449,36 @@ Route::group(
          ->name('madhu')
          ->where('id', '[0-9]+');
        
-         Route::get('/','AttsController@result')
+         Route::get('/reset','AttsController@result')
          ->name('tharu')
          ->where('id', '[0-9]+');
+            
+         Route::get('/reset1','AttsController@result1')
+         ->name('tharu1')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset2','AttsController@result2')
+         ->name('tharu2')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset3','AttsController@result3')
+         ->name('tharu3')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset4','AttsController@result4')
+         ->name('tharu4')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset5','AttsController@result5')
+         ->name('tharu5')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset6','AttsController@result6')
+         ->name('tharu6')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset7','AttsController@result7')
+         ->name('tharu7')
+         ->where('id', '[0-9]+');
+            
 });

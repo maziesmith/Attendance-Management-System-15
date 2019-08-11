@@ -143,6 +143,50 @@ use Carbon\Carbon;
           DB::table('atts')-> update(['is_saved'=>0]);
            return redirect::to(url::previous());
    } 
+   
+      public function result1()
+   {
+          DB::table('atts')-> update(['attend_mark1'=>0]);
+          DB::table('atts')-> update(['is_saved1'=>0]);
+           return redirect::to(url::previous());
+   } 
+      public function result2()
+   {
+          DB::table('atts')-> update(['attend_mark2'=>0]);
+          DB::table('atts')-> update(['is_saved2'=>0]);
+           return redirect::to(url::previous());
+   } 
+      public function result3()
+   {
+          DB::table('atts')-> update(['attend_mark3'=>0]);
+          DB::table('atts')-> update(['is_saved3'=>0]);
+           return redirect::to(url::previous());
+   } 
+      public function result4()
+   {
+          DB::table('atts')-> update(['attend_mark4'=>0]);
+          DB::table('atts')-> update(['is_saved4'=>0]);
+           return redirect::to(url::previous());
+   } 
+      public function result5()
+   {
+          DB::table('atts')-> update(['attend_mark5'=>0]);
+          DB::table('atts')-> update(['is_saved5'=>0]);
+           return redirect::to(url::previous());
+   } 
+      public function result6()
+   {
+          DB::table('atts')-> update(['attend_mark6'=>0]);
+          DB::table('atts')-> update(['is_saved6'=>0]);
+           return redirect::to(url::previous());
+   } 
+   
+      public function result7()
+   {
+          DB::table('atts')-> update(['attend_mark7'=>0]);
+          DB::table('atts')-> update(['is_saved7'=>0]);
+           return redirect::to(url::previous());
+   } 
     
     public function store(Request $request,$id)
    {   
@@ -168,9 +212,7 @@ use Carbon\Carbon;
             DB::table('atts')->update(['nooflectures' => DB::raw('nooflectures +  hours')]);
            
             DB::table('atts')->where('attend_mark', '0')->update(['lectureattend' => DB::raw('lectureattend + hours')]);
-        
            
-            
             DB::table('atts')-> update(['is_saved'=>0]); 
              }
              
@@ -189,14 +231,12 @@ use Carbon\Carbon;
             DB::table('atts')-> update(['Start_Time1'=>$request->ST]);
 
             DB::table('atts')-> update(['End_Time1'=>$request->ET]);
-            
-
            
             DB::table('atts')->update(['nooflectures1' => DB::raw('nooflectures1 +  hours1')]);
         
             DB::table('atts')->where('attend_mark1', '0')->update(['lectureattend1' => DB::raw('lectureattend1 + hours1')]);
-        
-            DB::table('atts')->update(['attend_mark1' =>'0']);
+            
+            DB::table('atts')-> update(['is_saved1'=>'0']); 
              }
              
              if($id==27){
@@ -218,9 +258,7 @@ use Carbon\Carbon;
            
             DB::table('atts')->update(['nooflectures2' => DB::raw('nooflectures2 +  hours2')]);
         
-            DB::table('atts')->where('attend_mark2', '0')->update(['lectureattend2' => DB::raw('lectureattend2 + hours2')]);
-        
-            DB::table('atts')->update(['attend_mark2' =>'0']);
+            DB::table('atts')-> update(['is_saved2'=>'0']); 
              }
                
             if($id==25){
@@ -242,8 +280,8 @@ use Carbon\Carbon;
             DB::table('atts')->update(['nooflectures3' => DB::raw('nooflectures3 +  hours3')]);
         
             DB::table('atts')->where('attend_mark3', '0')->update(['lectureattend3' => DB::raw('lectureattend3 + hours3')]);
-        
-            DB::table('atts')->update(['attend_mark3' =>'0']);
+       
+            DB::table('atts')-> update(['is_saved3'=>'0']); 
              }
              
             if($id==24){
@@ -265,7 +303,7 @@ use Carbon\Carbon;
         
             DB::table('atts')->where('attend_mark4', '0')->update(['lectureattend4' => DB::raw('lectureattend4 + hours4')]);
         
-            DB::table('atts')->update(['attend_mark4' =>'0']);
+            DB::table('atts')-> update(['is_saved4'=>'0']); 
              }
              
             if($id==23){
@@ -287,7 +325,7 @@ use Carbon\Carbon;
         
             DB::table('atts')->where('attend_mark5', '0')->update(['lectureattend5' => DB::raw('lectureattend5 + hours5')]);
         
-            DB::table('atts')->update(['attend_mark5' =>'0']);
+            DB::table('atts')-> update(['is_saved5'=>'0']); 
              }
              
             if($id==22){
@@ -310,7 +348,7 @@ use Carbon\Carbon;
         
             DB::table('atts')->where('attend_mark6', '0')->update(['lectureattend6' => DB::raw('lectureattend6 + hours6')]);
         
-            DB::table('atts')->update(['attend_mark6' =>'0']);
+            DB::table('atts')-> update(['is_saved6'=>'0']); 
              }
              
             if($id==21){
@@ -332,8 +370,8 @@ use Carbon\Carbon;
             DB::table('atts')->update(['nooflectures7' => DB::raw('nooflectures7 +  hours7')]);
         
             DB::table('atts')->where('attend_mark7', '0')->update(['lectureattend7' => DB::raw('lectureattend7 + hours7')]);
-        
-            DB::table('atts')->update(['attend_mark7' =>'0']);
+      
+            DB::table('atts')-> update(['is_saved7'=>'0']); 
              }
            
             return redirect::to(url::previous())
@@ -368,259 +406,144 @@ use Carbon\Carbon;
         
         return redirect::to(url::previous());
      }
-   
-     public function edit($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark==0){
-                $att->attend_mark=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark=0;
-                $att->save();
-            }
-            
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
-        }
-        else{
-            return redirect::to(url::previous() ."#r");
-        }
-    }
-    
-    
-    //function for mark attendance for subject2
-    public function edit1s($id)
+     
+        public function ray1(Request $request)
     {
-        $att = att::findOrFail($id);    
-            if($att->attend_mark1==0){
-                $att->attend_mark1=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark1=0;
-                $att->save();
-            }
+      DB::table('atts')-> update(['attend_mark1'=>0]); 
+        $record = $request->my_checkbox1;
         
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
+        if (is_null($record)){
+            
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark1'=>1]);
         }
-    }
-    
-       //function for mark attendance for subject3
-    public function edit2s($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark2==0){
-                $att->attend_mark2=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark2=0;
-                $att->save();
-            }
+        }    
+        
+        DB::table('atts')-> update(['is_saved1'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+     
+        public function ray2(Request $request)
+    {
+      DB::table('atts')-> update(['attend_mark2'=>0]); 
+        $record = $request->my_checkbox2;
+        
+        if (is_null($record)){
             
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark2'=>1]);
         }
-    }
-    
-       //function for mark attendance for subject4
-    public function edit3s($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark3==0){
-                $att->attend_mark3=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark3=0;
-                $att->save();
-            }
+        }    
+        
+        DB::table('atts')-> update(['is_saved2'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+     
+        public function ray3(Request $request)
+    {
+      DB::table('atts')-> update(['attend_mark3'=>0]); 
+        $record = $request->my_checkbox3;
+        
+        if (is_null($record)){
             
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark3'=>1]);
         }
-    }
-    
-       //function for mark attendance for subject5
-    public function edit4s($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark4==0){
-                $att->attend_mark4=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark4=0;
-                $att->save();
-            }
+        }    
+        
+        DB::table('atts')-> update(['is_saved3'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+     
+        public function ray4(Request $request)
+    {
+      DB::table('atts')-> update(['attend_mark4'=>0]); 
+        $record = $request->my_checkbox4;
+        
+        if (is_null($record)){
             
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark4'=>1]);
         }
-    }
-    
-       //function for mark attendance for subject6
-    public function edit5s($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark5==0){
-                $att->attend_mark5=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark5=0;
-                $att->save();
-            }
+        }    
+        
+        DB::table('atts')-> update(['is_saved4'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+     
+        public function ray5(Request $request)
+    {
+      DB::table('atts')-> update(['attend_mark5'=>0]); 
+        $record = $request->my_checkbox5;
+        
+        if (is_null($record)){
             
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark5'=>1]);
         }
-    }
-    
-       //function for mark attendance for subject7
-    public function edit6s($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark6==0){
-                $att->attend_mark6=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark6=0;
-                $att->save();
-            }
+        }    
+        
+        DB::table('atts')-> update(['is_saved5'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+     
+        public function ray6(Request $request)
+    {
+      DB::table('atts')-> update(['attend_mark6'=>0]); 
+        $record = $request->my_checkbox6;
+        
+        if (is_null($record)){
             
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark6'=>1]);
         }
-    }
-    
-    
-       //function for mark attendance for subject8
-    public function edit7s($id)
-    {        
-        $att = att::findOrFail($id);    
-            if($att->attend_mark7==0){
-                $att->attend_mark7=1;
-                $att->save(); 
-            }  
-            else{
-                $att->attend_mark7=0;
-                $att->save();
-            }
+        }    
+        
+        DB::table('atts')-> update(['is_saved6'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+     
+        public function ray7(Request $request)
+    {
+      DB::table('atts')-> update(['attend_mark7'=>0]); 
+        $record = $request->my_checkbox7;
+        
+        if (is_null($record)){
             
-            
-        if($id<=4 || (12<=$id  && $id<=15) || (23<=$id  && $id<=26) || (34<=$id  && $id<=37)) {    
-            return redirect::to(url::previous() );
         }
         else{
-            return redirect::to(url::previous() ."#r");
+        foreach ($record as $value) {
+            DB::table('atts')->where('id', $value)->update(['attend_mark7'=>1]);
         }
-    }
-    
-    
+        }    
+        
+        DB::table('atts')-> update(['is_saved7'=>1]); 
+        
+        return redirect::to(url::previous());
+     }
+   
+     
     
     //function for reset Table_2 data
-     public function reset($id)
-    { $level = DB::table('Level')
-          ->where('id','=', "1")->first();
-           
-          $level1 = DB::table('Level')
-         ->where('id','=', "2")->first();
-          
-          $level2 = DB::table('Level')
-         ->where('id','=', "3")->first();
-          
-          $level3 = DB::table('Level')
-          ->where('id','=', "4")->first();
-          
-          $items = DB::table('precentages')
-             ->select('precentage')
-             ->where('Level','=', "2S")->first();
-         
-          $tableCourseSStudentsObjects  = table__course__s__students::where('Level', '=', "2S") ->latest()->paginate(60);
-          
-        if($id==35){
-            DB::table('atts')
-               ->update(['nooflectures' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend' => 0]);
-             }
-        if($id==31){
-            DB::table('atts')
-               ->update(['nooflectures1' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend1' => 0]);
-             }
-      
-        if($id==27){
-            DB::table('atts')
-               ->update(['nooflectures2' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend2' => 0]);
-             } 
-        if($id==25){
-            DB::table('atts')
-               ->update(['nooflectures3' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend3' => 0]);
-             }
-        if($id==24){
-           DB::table('atts')
-               ->update(['nooflectures4' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend4' => 0]);
-             }
-        if($id==23){
-        DB::table('atts')
-               ->update(['nooflectures5' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend5' => 0]);
-             }
-        if($id==22){
-              DB::table('atts')
-               ->update(['nooflectures6' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend6' => 0]);
-             }
-        if($id==21){
-            DB::table('atts')
-               ->update(['nooflectures7' => 0]);
-            DB::table('atts')
-               ->update(['lectureattend7' => 0]);
-             } 
    
-             return view('Reset_Table/Update_Semester', compact('tableCourseSStudentsObjects','items','level','level1','level2','level3'));
-          
-         
-    }
  
      public function reset1()
     {
@@ -674,6 +597,40 @@ use Carbon\Carbon;
                ->update(['nooflectures7' => 0]);
             DB::table('atts')
                ->update(['lectureattend7' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts')
+               ->update(['is_saved' => 0]);
+             DB::table('atts')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts')
+               ->update(['is_saved7' => 0]);
         
              return view('Reset_Table/Update_Semester', compact('tableCourseSStudentsObjects','items','level','level1','level2','level3'));
     }

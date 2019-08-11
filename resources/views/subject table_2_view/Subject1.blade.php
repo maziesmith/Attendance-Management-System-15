@@ -74,7 +74,7 @@
                             <td style=>{{ $att->id }}</td>
                             <td style="background: Teal">{{ $att->Reg_No }}</td>
                             <td style="background: Teal">{{ $att->name }}</td>
-                            <td>{{ $att->attend_mark }}</td>
+                            <td><font color="red">{{ $att->attend_mark }}</font></td>
                             <td>{{ $att->lectureattend }}</td>
                             <td >{{ $att->precentage }}%</td>
                             
@@ -86,7 +86,7 @@
                             <td>{{ $att->id }}</td>
                             <td>{{ $att->Reg_No }}</td>
                             <td>{{ $att->name }}</td>
-                           <td>{{ $att->attend_mark }}</td>
+                           <td><font color="red">{{ $att->attend_mark }}</font></td>
                             <td>{{ $att->lectureattend }}</td>
                             <td style="background: ">{{ $att->precentage }}%</td>
 
