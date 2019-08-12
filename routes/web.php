@@ -1445,9 +1445,68 @@ Route::group(
          ->name('atts.atts.updateS')
          ->where('id', '[0-9]+');
       
-       Route::get('/{atts}/edit','AttsController@editS')
+         Route::put('att/{atts}/1', 'AttsController@updateS1')
+         ->name('atts.atts.updateS1')
+         ->where('id', '[0-9]+');
+         
+         Route::put('att/{atts}/2', 'AttsController@updateS2')
+         ->name('atts.atts.updateS2')
+         ->where('id', '[0-9]+');
+            
+         Route::put('att/{atts}/3', 'AttsController@updateS3')
+         ->name('atts.atts.updateS3')
+         ->where('id', '[0-9]+');
+               
+         Route::put('att/{atts}/4', 'AttsController@updateS4')
+         ->name('atts.atts.updateS4')
+         ->where('id', '[0-9]+');
+                  
+         Route::put('att/{atts}/5', 'AttsController@updateS5')
+         ->name('atts.atts.updateS5')
+         ->where('id', '[0-9]+');
+                     
+         Route::put('att/{atts}/6', 'AttsController@updateS6')
+         ->name('atts.atts.updateS6')
+         ->where('id', '[0-9]+');
+                        
+         Route::put('att/{atts}/7', 'AttsController@updateS7')
+         ->name('atts.atts.updateS7')
+         ->where('id', '[0-9]+');
+           
+      
+        Route::get('/{atts}/edit','AttsController@editS')
          ->name('madhu')
          ->where('id', '[0-9]+');
+       
+        Route::get('/{atts}/edit1','AttsController@editS1')
+         ->name('madhu1')
+         ->where('id', '[0-9]+');
+        
+        Route::get('/{atts}/edit2','AttsController@editS2')
+         ->name('madhu2')
+         ->where('id', '[0-9]+');
+       
+        Route::get('/{atts}/edit3','AttsController@editS3')
+         ->name('madhu3')
+         ->where('id', '[0-9]+');
+        Route::get('/{atts}/edit4','AttsController@editS4')
+         ->name('madhu4')
+         ->where('id', '[0-9]+');
+       
+        Route::get('/{atts}/edit5','AttsController@editS5')
+         ->name('madhu5')
+         ->where('id', '[0-9]+');
+        
+        Route::get('/{atts}/edit6','AttsController@editS6')
+         ->name('madhu6')
+         ->where('id', '[0-9]+');
+       
+           Route::get('/{atts}/edit7','AttsController@editS7')
+         ->name('madhu7')
+         ->where('id', '[0-9]+');
+        
+       
+        
        
          Route::get('/reset','AttsController@result')
          ->name('tharu')

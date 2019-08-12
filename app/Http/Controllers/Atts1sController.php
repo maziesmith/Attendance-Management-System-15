@@ -34,7 +34,7 @@ class Atts1sController extends Controller
                 ->latest()->paginate(100);
         } else 
         {   
-            $atts1sObjects = atts_1s::paginate(25);   
+            $atts1sObjects = atts_1s::paginate(100);   
         }
 
          return view('atts_1s.index', compact('atts1sObjects','level','level1','level2','level3'));
