@@ -19,10 +19,12 @@
     
     <th>Course Code :{{$data->code}}  </th>
     <th>Course Name :{{$data->name}}</th>
+
      <th>date :{{$SingleData->date6}}</th>
     <th>Start_Time :{{$SingleData->Start_Time6}}</th>
     <th>End_Time :{{$SingleData->End_Time6}}</th>
     <th>Hall :{{$SingleData->hall6}}</th>
+
 
      <th>No of Lectures :{{$SingleData->nooflectures6}} </th>  
      </tr>

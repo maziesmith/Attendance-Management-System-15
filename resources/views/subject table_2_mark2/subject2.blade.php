@@ -109,7 +109,7 @@
  <table class="table">
                     <thead>
                         <tr class="tr btn-dark">
-                           
+  
   <th>          
       
                             @if( $att->is_saved1==1)
@@ -143,6 +143,7 @@
                 </div> 
             </div> 
         </div>
+
     </div>
 </div>
 </div> 
