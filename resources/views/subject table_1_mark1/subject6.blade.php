@@ -8,8 +8,7 @@
                       <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn btn-warning "><i class="fa fa-arrow-left" aria-hidden="true"></i>Admin Menu  </button></a>
                       <a href="{{ url('/1s_attendance') }}" title="Go back to main menu"><button class="btn btn-primary "><i class="fa fa-arrow-left" aria-hidden="true"></i>Attendance Menu  </button></a>                        
   <br><br>
-  @foreach($data as $data1)
-                            @endforeach
+ 
                 <div class="card">
                     <div class="card-header">Attendance table of course {{$data->name}}</div>
                     <div class="card-body">

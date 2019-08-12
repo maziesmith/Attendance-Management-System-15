@@ -8,7 +8,7 @@ class att4m extends Model
 {
     public $timestamps = false;
    
-    protected $table = 'atts_4ms';
+    protected $table = 'atts_3s';
 
     protected $primaryKey = 'id';
 
