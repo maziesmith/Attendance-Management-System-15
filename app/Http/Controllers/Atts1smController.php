@@ -63,14 +63,12 @@ use Carbon\Carbon;
               if($id==37){
              return view('subject table_1_view.Subject7', compact('atts','items','data','SingleData'));
              }
-              if($id==21){
+              if($id==46){
              return view('subject table_1_view.Subject8', compact('atts','items','data','SingleData'));
              }
     }
     
-          
-    
-   
+         
     // --------------------------_ATTENDANCE MARKING VIEW_------------------------------------------------
     
     //attenadnce marking view table_2 subject
@@ -99,7 +97,7 @@ use Carbon\Carbon;
         if($id==37){
                return view('subject table_1_mark1.subject7', compact('atts','data'));
              }
-        if($id==21){
+        if($id==46){
                return view('subject table_1_mark1.subject8', compact('atts','data'));
              }     
     }
@@ -316,7 +314,7 @@ use Carbon\Carbon;
             DB::table('atts_1s')-> update(['is_saved6'=>'0']); 
              }
              
-            if($id==21){
+            if($id==46){
                 $st = Carbon::parse($request->ST);
                 $et = Carbon::parse($request->ET);
                 $diff = $et->diffInHours($st);
@@ -339,164 +337,7 @@ use Carbon\Carbon;
             DB::table('atts_1s')-> update(['is_saved7'=>'0']); 
              }
 
-           
-         
-           
-         if($id==44){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
 
-            DB::table('atts_1s')-> update(['hours1'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall1'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date1'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time1'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time1'=>$request->ET]);
-       
-        DB::table('atts_1s')->update(['nooflectures1' => DB::raw('nooflectures1 +  hours1')]);
-    
-        DB::table('atts_1s')->where('attend_mark1', '0')->update(['lectureattend1' => DB::raw('lectureattend1 + hours1')]);
-    
-        DB::table('atts_1s')->update(['attend_mark1' =>'0']);
-         }
-         
-         if($id==43){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
-
-            DB::table('atts_1s')-> update(['hours2'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall2'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date2'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time2'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time2'=>$request->ET]); 
-       
-        DB::table('atts_1s')->update(['nooflectures2' => DB::raw('nooflectures2 +  hours2')]);
-    
-        DB::table('atts_1s')->where('attend_mark2', '0')->update(['lectureattend2' => DB::raw('lectureattend2 + hours2')]);
-    
-        DB::table('atts_1s')->update(['attend_mark2' =>'0']);
-         }
-           
-        if($id==42){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
-
-            DB::table('atts_1s')-> update(['hours3'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall3'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date3'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time3'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time3'=>$request->ET]); 
-
-        DB::table('atts_1s')->update(['nooflectures3' => DB::raw('nooflectures3 +  hours3')]);
-    
-        DB::table('atts_1s')->where('attend_mark3', '0')->update(['lectureattend3' => DB::raw('lectureattend3 + hours3')]);
-    
-        DB::table('atts_1s')->update(['attend_mark3' =>'0']);
-         }
-         
-        if($id==39){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
-
-            DB::table('atts_1s')-> update(['hours4'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall4'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date4'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time4'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time4'=>$request->ET]); 
-       
-        DB::table('atts_1s')->update(['nooflectures4' => DB::raw('nooflectures4 +  hours4')]);
-    
-        DB::table('atts_1s')->where('attend_mark4', '0')->update(['lectureattend4' => DB::raw('lectureattend4 + hours4')]);
-    
-        DB::table('atts_1s')->update(['attend_mark4' =>'0']);
-         }
-         
-        if($id==38){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
-
-            DB::table('atts_1s')-> update(['hours5'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall5'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date5'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time5'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time5'=>$request->ET]); 
-       
-        DB::table('atts_1s')->update(['nooflectures5' => DB::raw('nooflectures5 +  hours5')]);
-    
-        DB::table('atts_1s')->where('attend_mark5', '0')->update(['lectureattend5' => DB::raw('lectureattend5 + hours5')]);
-    
-        DB::table('atts_1s')->update(['attend_mark5' =>'0']);
-         }
-         
-        if($id==37){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
-
-            DB::table('atts_1s')-> update(['hours6'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall6'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date6'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time6'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time6'=>$request->ET]); 
-       
-        DB::table('atts_1s')->update(['nooflectures6' => DB::raw('nooflectures6 +  hours6')]);
-    
-        DB::table('atts_1s')->where('attend_mark6', '0')->update(['lectureattend6' => DB::raw('lectureattend6 + hours6')]);
-    
-        DB::table('atts_1s')->update(['attend_mark6' =>'0']);
-         }
-         
-        if($id==21){
-            $st = Carbon::parse($request->ST);
-            $et = Carbon::parse($request->ET);
-            $diff = $et->diffInHours($st);
-
-            DB::table('atts_1s')-> update(['hours7'=>$diff]);  
-
-            DB::table('atts_1s')-> update(['hall7'=>$request->hall]);
-
-        DB::table('atts_1s')-> update(['date7'=>$request->date]);
-
-        DB::table('atts_1s')-> update(['Start_Time7'=>$request->ST]);
-
-        DB::table('atts_1s')-> update(['End_Time7'=>$request->ET]); 
-       
-        DB::table('atts_1s')->update(['nooflectures7' => DB::raw('nooflectures7 +  hours7')]);
-    
-        DB::table('atts_1s')->where('attend_mark7', '0')->update(['lectureattend7' => DB::raw('lectureattend7 + hours7')]);
-    
-        DB::table('atts_1s')->update(['attend_mark7' =>'0']);
-         }
-
-           
             return redirect::to(url::previous())
             ->with('success_message', 'Attendance Sheet successfully added!');   
                  

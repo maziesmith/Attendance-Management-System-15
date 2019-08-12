@@ -21,12 +21,15 @@
                     <thead>
                         <tr class="tr btn-dark">
     
-    <th>Course Code :{{$data->code}}  </th>
+   <th>Course Code :{{$data->code}}  </th>
     <th>Course Name :{{$data->name}}</th>
-    <th>date :{{$SingleData->date}}</th>
-    <th>Start_Time :{{$SingleData->Start_Time}}</th>
-    <th>End_Time :{{$SingleData->End_Time}}</th>
-    <th>Hall :{{$SingleData->hall}}</th>
+
+    <th>date :{{$SingleData->date2}}</th>
+    <th>Start_Time :{{$SingleData->Start_Time2}}</th>
+    <th>End_Time :{{$SingleData->End_Time2}}</th>
+    <th>Hall :{{$SingleData->hall2}}</th>
+
+
     <th>No of Lectures :{{$SingleData->nooflectures2}} </th>  
    
      </tr>
@@ -55,11 +58,12 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Registration No</th>
+                            <th>Registration   No</th>
                             <th>Name</th>
-                    
-                            <th>Lecture attend</th>
+                            <th>last submitted attendance </th>
+                            <th>total Lecture attend</th>
                             <th>Percentage</th>
+                            <th>Edit</th>
                          
                         </tr>
                     </thead>
@@ -68,26 +72,49 @@
  <tr>
 
          @if( $att->precentage2 <$items->precentage)                         
-                            <td style="background: red">{{ $att->id }}</td>
-                            <td style="background: red">{{ $att->Reg_No }}</td>
-                            <td style="background: red">{{ $att->name }}</td>
-                        
-                            <td style="background: red">{{ $att->lectureattend2 }}</td>
-                            <td style="background: red">{{ $att->precentage2 }}%</td>
+                               <td style=>{{ $att->id }}</td>
+                            <td style="background: Teal">{{ $att->Reg_No }}</td>
+                            <td style="background: Teal">{{ $att->name }}</td>
+                            <td><font color="red">{{ $att->attend_mark2 }}</font></td>
+                            <td>{{ $att->lectureattend2 }}</td>
+                            <td >{{ $att->precentage2 }}%</td>
+                            
+                               <td>        <a href="#" class="btn btn-primary" title="Edit Atts">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
+                                        </a></td>
                                 
          @else
                             <td>{{ $att->id }}</td>
                             <td>{{ $att->Reg_No }}</td>
                             <td>{{ $att->name }}</td>
-                           
+                           <td><font color="red">{{ $att->attend_mark2 }}</font></td>
                             <td>{{ $att->lectureattend2 }}</td>
                             <td style="background: ">{{ $att->precentage2 }}%</td>
+
+                            <td>
+
+                                <form method="POST" action="#" accept-charset="UTF-8">
+                                <input name="_method" value="DELETE" type="hidden">
+                                {{ csrf_field() }}
+
+                                   
+                                       <a href="#" class="btn btn-primary" title="Edit Atts">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
+                                        </a>
+
+                                        
+                                    </div>
+
+                                </form>
+                                
+                            </td>
+
+
          @endif  
    
 
                    </tr>       
                     @endforeach
- 
                     </tbody>
                 </table>
                    
@@ -96,12 +123,13 @@
             
            
                   <a id = "r"></a>
+                 
            
         <div class="panel-footer">
             {!! $atts->render() !!}
         </div>
          </div>
-
+ 
         
          </div>
       </div> 
