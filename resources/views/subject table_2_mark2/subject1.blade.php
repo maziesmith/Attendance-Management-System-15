@@ -28,6 +28,9 @@
                             </tr>
                         </thead> 
                     </table>
+                    
+                     <font color="red">*All students default mark as a present</font><br><br>
+                     
                     <div class="panel panel-default">
                         <div class="panel-heading clearfix">
                             <div class="panel-body panel-body-with-table">

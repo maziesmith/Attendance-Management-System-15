@@ -257,6 +257,8 @@ use Carbon\Carbon;
             DB::table('atts')-> update(['End_Time2'=>$request->ET]); 
            
             DB::table('atts')->update(['nooflectures2' => DB::raw('nooflectures2 +  hours2')]);
+            
+             DB::table('atts')->where('attend_mark2', '0')->update(['lectureattend2' => DB::raw('lectureattend2 + hours2')]);
         
             DB::table('atts')-> update(['is_saved2'=>'0']); 
              }
@@ -867,11 +869,12 @@ use Carbon\Carbon;
             $atts->update($data);
 
             return redirect()->route('return')
-                             ->with('success_message', 'Atts was successfully updated!');
-
-        
+                             ->with('success_message', 'Atts was successfully updated!'); 
                
     }
+           
+             
+    
     protected function getDataS(Request $request)
     {
         $rules = [
@@ -883,6 +886,9 @@ use Carbon\Carbon;
 
         return $data;
     }
+    
+   
+    
      public function storeS(Request $request)
     {
         
