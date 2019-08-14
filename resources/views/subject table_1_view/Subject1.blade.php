@@ -72,7 +72,7 @@
  <tr>
 
          @if( $att->precentage <$items->precentage)                         
-         <td style=>{{ $att->id }}</td>
+                            <td style=>{{ $att->id }}</td>
                             <td style="background: Teal">{{ $att->Reg_No }}</td>
                             <td style="background: Teal">{{ $att->name }}</td>
                             <td><font color="red">{{ $att->attend_mark }}</font></td>

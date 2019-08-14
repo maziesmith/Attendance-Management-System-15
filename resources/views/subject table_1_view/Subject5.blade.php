@@ -25,8 +25,6 @@
     <th>Start_Time :{{$SingleData->Start_Time4}}</th>
     <th>End_Time :{{$SingleData->End_Time4}}</th>
     <th>Hall :{{$SingleData->hall4}}</th>
-
-
      <th>No of Lectures :{{$SingleData->nooflectures4}} </th> 
      </tr>
                     </thead>  </table>
