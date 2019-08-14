@@ -1455,6 +1455,15 @@ Route::post('/attendance_mark5S3', 'Atts3smController@ray5');
 Route::post('/attendance_mark6S3', 'Atts3smController@ray6');
 Route::post('/attendance_mark7S3', 'Atts3smController@ray7');
 
+Route::post('/attendance_markS4', 'Atts4smController@ray');
+Route::post('/attendance_mark1S4', 'Atts4smController@ray1');
+Route::post('/attendance_mark2S4', 'Atts4smController@ray2');
+Route::post('/attendance_mark3S4', 'Atts4smController@ray3');
+Route::post('/attendance_mark4S4', 'Atts4smController@ray4');
+Route::post('/attendance_mark5S4', 'Atts4smController@ray5');
+Route::post('/attendance_mark6S4', 'Atts4smController@ray6');
+Route::post('/attendance_mark7S4', 'Atts4smController@ray7');
+
 
 Route::group(
 [
@@ -1524,7 +1533,39 @@ Route::group(
          ->name('madhu7')
          ->where('id', '[0-9]+');
         
-     
+         Route::get('/reset4sm','Atts4smController@result')
+         ->name('tharuS4')
+         ->where('id', '[0-9]+');
+            
+         Route::get('/reset14sm','Atts4smController@result1')
+         ->name('tharu1S4')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset24sm','Atts4smController@result2')
+         ->name('tharu2S4')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset34sm','Atts4smController@result3')
+         ->name('tharu3S4')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset44sm','Atts4smController@result4')
+         ->name('tharu4S4')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset54sm','Atts4smController@result5')
+         ->name('tharu5S4')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset64sm','Atts4smController@result6')
+         ->name('tharu6S4')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset74sm','Atts4smController@result7')
+         ->name('tharu7S4')
+         ->where('id', '[0-9]+');
+           
+           
            
           Route::get('/reset3sm','Atts3smController@result')
          ->name('tharuS3')

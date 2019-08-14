@@ -128,7 +128,7 @@
             <option value = "other"> other </option>
         </select> 
         
-        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:15%  ">submit the attendance </button>       
+        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:7%  ">submit the attendance </button>       
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </form> </th>
    

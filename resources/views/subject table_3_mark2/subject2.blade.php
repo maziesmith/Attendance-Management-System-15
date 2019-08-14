@@ -111,7 +111,7 @@
                            
   <th> 
        @if( $att->is_saved1==1)
-       <form class="form-horizontal" method="post" action="{{ route('hours1.index', $data->id ) }}" >  
+           <form class="form-horizontal" method="post" action="{{ route('hours1.index', $data->id ) }}" >  
         {{-- <label style="text-align: center;  position: relative ; left:3%" ><b>Hours :</b> :</label>
         <input type="number"  name="name" placeholder="Enter lecture hours"  name="hour" minlength="1" maxlength="200"  max="10" min="1" required="true"  style="background-color:yellow; text-align: center;  position: relative ; left:3%" >    
        
@@ -132,14 +132,15 @@
             <option value = "other"> other </option>
         </select> 
         
-        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:15%  ">submit the attendance </button>      
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:7%  ">submit the attendance </button>
+           <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </form> </th>
+   
                           
                         </tr>
-                    </thead>  </table>
+                    </thead>  </table> 
         @endif
-        
+  
          </div>
       </div> 
     </div> 
@@ -147,5 +148,7 @@
              </div>
      </div>
  
-        
+       
 @endsection
+
+
