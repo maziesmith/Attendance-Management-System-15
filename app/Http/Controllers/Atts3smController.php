@@ -179,25 +179,30 @@ use Carbon\Carbon;
              
                
              if($id==18){
+                
                 $st = Carbon::parse($request->ST);
                 $et = Carbon::parse($request->ET);
                 $diff = $et->diffInHours($st);
+                
+               
     
-                DB::table('atts_3s')-> update(['hours1'=>$diff]);  
+               DB::table('atts_3s')-> update(['hours1'=>$diff]); 
+               
+                 DB::table('atts_3s')->update(['nooflectures1' => DB::raw('nooflectures1 +  hours1')]);
+        
+            DB::table('atts_3s')->where('attend_mark1', '0')->update(['lectureattend1' => DB::raw('lectureattend1 + hours1')]);
+            
+            DB::table('atts_3s')-> update(['is_saved1'=>'0']); 
 
-                DB::table('atts_3s')-> update(['hall1'=>$request->hall]);
+            DB::table('atts_3s')-> update(['hall1'=>$request->hall]);
 
-            DB::table('atts_3s')-> update(['date1'=>$request->date]);
+           DB::table('atts_3s')-> update(['date1'=>$request->date]);
 
             DB::table('atts_3s')-> update(['Start_Time1'=>$request->ST]);
 
             DB::table('atts_3s')-> update(['End_Time1'=>$request->ET]);
            
-            DB::table('atts_3s')->update(['nooflectures1' => DB::raw('nooflectures1 +  hours1')]);
-        
-            DB::table('atts_3s')->where('attend_mark1', '0')->update(['lectureattend1' => DB::raw('lectureattend1 + hours1')]);
-            
-            DB::table('atts_3s')-> update(['is_saved1'=>'0']); 
+         
              }
              
              if($id==17){
