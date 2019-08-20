@@ -78,7 +78,7 @@
                             <td>{{ $att->lectureattend }}</td>
                             <td >{{ $att->precentage }}%</td>
                             
-                               <td>        <a href="{{ route('madhu', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
+                               <td>        <a href="#" class="btn btn-primary" title="Edit Atts">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
                                         </a></td>
                                 
@@ -97,7 +97,7 @@
                                 {{ csrf_field() }}
 
                                    
-                                       <a href="{{ route('madhu', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
+                                       <a href="#" class="btn btn-primary" title="Edit Atts">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true">Edit</span>
                                         </a>
 
