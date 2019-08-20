@@ -1464,6 +1464,52 @@ Route::post('/attendance_mark5S4', 'Atts4smController@ray5');
 Route::post('/attendance_mark6S4', 'Atts4smController@ray6');
 Route::post('/attendance_mark7S4', 'Atts4smController@ray7');
 
+Route::post('/attendance_markG1', 'Atts1gsController@ray');
+Route::post('/attendance_mark1G1', 'Atts1gsController@ray1');
+Route::post('/attendance_mark2G1', 'Atts1gsController@ray2');
+Route::post('/attendance_mark3G1', 'Atts1gsController@ray3');
+Route::post('/attendance_mark4G1', 'Atts1gsController@ray4');
+Route::post('/attendance_mark5G1', 'Atts1gsController@ray5');
+Route::post('/attendance_mark6G1', 'Atts1gsController@ray6');
+Route::post('/attendance_mark7G1', 'Atts1gsController@ray7');
+
+
+Route::post('/attendance_markG2', 'Atts2gsController@ray');
+Route::post('/attendance_mark1G2', 'Atts2gsController@ray1');
+Route::post('/attendance_mark2G2', 'Atts2gsController@ray2');
+Route::post('/attendance_mark3G2', 'Atts2gsController@ray3');
+Route::post('/attendance_mark4G2', 'Atts2gsController@ray4');
+Route::post('/attendance_mark5G2', 'Atts2gsController@ray5');
+Route::post('/attendance_mark6G2', 'Atts2gsController@ray6');
+Route::post('/attendance_mark7G2', 'Atts2gsController@ray7');
+
+Route::post('/attendance_markG3', 'Atts3gsController@ray');
+Route::post('/attendance_mark1G3', 'Atts3gsController@ray1');
+Route::post('/attendance_mark2G3', 'Atts3gsController@ray2');
+Route::post('/attendance_mark3G3', 'Atts3gsController@ray3');
+Route::post('/attendance_mark4G3', 'Atts3gsController@ray4');
+Route::post('/attendance_mark5G3', 'Atts3gsController@ray5');
+Route::post('/attendance_mark6G3', 'Atts3gsController@ray6');
+Route::post('/attendance_mark7G3', 'Atts3gsController@ray7');
+
+Route::post('/attendance_markM3', 'Atts3msController@ray');
+Route::post('/attendance_mark1M3', 'Atts3msController@ray1');
+Route::post('/attendance_mark2M3', 'Atts3msController@ray2');
+Route::post('/attendance_mark3M3', 'Atts3msController@ray3');
+Route::post('/attendance_mark4M3', 'Atts3msController@ray4');
+Route::post('/attendance_mark5M3', 'Atts3msController@ray5');
+Route::post('/attendance_mark6M3', 'Atts3msController@ray6');
+Route::post('/attendance_mark7M3', 'Atts3msController@ray7');
+
+Route::post('/attendance_markM4', 'Atts4msController@ray');
+Route::post('/attendance_mark1M4', 'Atts4msController@ray1');
+Route::post('/attendance_mark2M4', 'Atts4msController@ray2');
+Route::post('/attendance_mark3M4', 'Atts4msController@ray3');
+Route::post('/attendance_mark4M4', 'Atts4msController@ray4');
+Route::post('/attendance_mark5M4', 'Atts4msController@ray5');
+Route::post('/attendance_mark6M4', 'Atts4msController@ray6');
+Route::post('/attendance_mark7M4', 'Atts4msController@ray7');
+
 
 Route::group(
 [
@@ -1532,6 +1578,171 @@ Route::group(
            Route::get('/{atts}/edit7','AttsController@editS7')
          ->name('madhu7')
          ->where('id', '[0-9]+');
+           
+           
+         Route::get('/reset2gs','Atts2gsController@result')
+         ->name('tharuG2')
+         ->where('id', '[0-9]+');
+            
+         Route::get('/reset12gs','Atts2gsController@result1')
+         ->name('tharu1G2')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset22gs','Atts2gsController@result2')
+         ->name('tharu2G2')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset32gs','Atts2gsController@result3')
+         ->name('tharu3G2')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset42gs','Atts2gsController@result4')
+         ->name('tharu4G2')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset52gs','Atts2gsController@result5')
+         ->name('tharu5G2')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset62gs','Atts2gsController@result6')
+         ->name('tharu6G2')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset72gs','Atts2gsController@result7')
+         ->name('tharu7G2')
+         ->where('id', '[0-9]+');
+         
+		 
+		 Route::get('/reset3gs','Atts3gsController@result')
+         ->name('tharuG3')
+         ->where('id', '[0-9]+');
+            
+         Route::get('/reset13gs','Atts3gsController@result1')
+         ->name('tharu1G3')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset23gs','Atts3gsController@result2')
+         ->name('tharu2G3')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset33gs','Atts3gsController@result3')
+         ->name('tharu3G3')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset43gs','Atts3gsController@result4')
+         ->name('tharu4G3')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset53gs','Atts3gsController@result5')
+         ->name('tharu5G3')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset63gs','Atts3gsController@result6')
+         ->name('tharu6G3')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset73gs','Atts3gsController@result7')
+         ->name('tharu7G3')
+         ->where('id', '[0-9]+');
+         
+		 
+		 Route::get('/reset3ms','Atts3msController@result')
+         ->name('tharuM3')
+         ->where('id', '[0-9]+');
+            
+         Route::get('/reset13ms','Atts3msController@result1')
+         ->name('tharu1M3')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset23ms','Atts3msController@result2')
+         ->name('tharu2M3')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset33ms','Atts3msController@result3')
+         ->name('tharu3M3')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset43ms','Atts3msController@result4')
+         ->name('tharu4M3')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset53ms','Atts3msController@result5')
+         ->name('tharu5M3')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset63ms','Atts3msController@result6')
+         ->name('tharu6M3')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset73ms','Atts3msController@result7')
+         ->name('tharu7M3')
+         ->where('id', '[0-9]+');
+         
+		 Route::get('/reset4ms','Atts4msController@result')
+         ->name('tharuM4')
+         ->where('id', '[0-9]+');
+            
+         Route::get('/reset14ms','Atts4msController@result1')
+         ->name('tharu1M4')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset24ms','Atts4msController@result2')
+         ->name('tharu2M4')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset34ms','Atts4msController@result3')
+         ->name('tharu3M4')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset44ms','Atts4msController@result4')
+         ->name('tharu4M4')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset54ms','Atts4msController@result5')
+         ->name('tharu5M4')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset64ms','Atts4msController@result6')
+         ->name('tharu6M4')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset74ms','Atts4msController@result7')
+         ->name('tharu7M4')
+         ->where('id', '[0-9]+');
+      
+                           
+         Route::get('/reset1g','Atts1gsController@result')
+         ->name('tharuG1')
+         ->where('id', '[0-9]+');
+            
+         Route::get('/reset11g','Atts1gsController@result1')
+         ->name('tharu1G1')
+         ->where('id', '[0-9]+');
+         
+            Route::get('/reset21g','Atts1gsController@result2')
+         ->name('tharu2G1')
+         ->where('id', '[0-9]+');
+            
+               Route::get('/reset31g','Atts1gsController@result3')
+         ->name('tharu3G1')
+         ->where('id', '[0-9]+');
+               
+                  Route::get('/reset41g','Atts1gsController@result4')
+         ->name('tharu4G1')
+         ->where('id', '[0-9]+');
+                  
+                     Route::get('/reset51g','Atts1gsController@result5')
+         ->name('tharu5G1')
+         ->where('id', '[0-9]+');
+                     
+                        Route::get('/reset61g','Atts1gsController@result6')
+         ->name('tharu6G1')
+         ->where('id', '[0-9]+');
+                        
+                           Route::get('/reset71g','Atts1gsController@result7')
+         ->name('tharu7G1')
+         ->where('id', '[0-9]+');
+           
         
          Route::get('/reset4sm','Atts4smController@result')
          ->name('tharuS4')
