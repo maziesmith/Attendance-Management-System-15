@@ -8,7 +8,7 @@
                       <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn btn-warning "><i class="fa fa-arrow-left" aria-hidden="true"></i>Admin Menu  </button></a>
                       <a href="{{ url('/3m_attendance') }}" title="Go back to main menu"><button class="btn btn-primary "><i class="fa fa-arrow-left" aria-hidden="true"></i>Attendance Menu  </button></a>                        
   <br><br>
- 
+
                 <div class="card">
                     <div class="card-header">Attendance table of course {{$data->name}}</div>
                     <div class="card-body">
@@ -33,8 +33,8 @@
     <th>Course Name :{{$data->name}}</th>
   
      </tr>
-                                        </thead>  </table>
-      <font color="red">*All students default mark as a present</font><br><br>
+                    </thead>  </table>
+     <font color="red">*All students default mark as a present</font><br><br>
 
     <div class="panel panel-default">
 
@@ -42,12 +42,13 @@
 
         <div class="panel-body panel-body-with-table">
             <div class="table-responsive">
- <form  method="post" action="/attendance_mark6M3">
-                                    @csrf   
+                <form  method="post" action="/attendance_mark7M3">
+                                    @csrf 
+
                 <table class="table">
                     <thead>
                         <tr>
-                           <th>#</th>
+                              <th>#</th>
                             <th>Registration No</th>
                             <th>Name</th>
                             <th>Attendance</th>
@@ -56,16 +57,16 @@
                     </thead>
                     <tbody>
                     @foreach($atts as $att)
-                        @if( $att->is_saved6==0)
+                     @if( $att->is_saved7==0)
                         <tr>
-                             <td>{{ $att->id }}</td>
+                          <td>{{ $att->id }}</td>
                             <td>{{ $att->Reg_No }}</td>
                             <td>{{ $att->name }}</td>
                             
                             <td>
-                             <input type="checkbox"  name="my_checkbox6[]"  value="{{$att->id}}">
+                             <input type="checkbox"  name="my_checkbox7[]"  value="{{$att->id}}">
                                                         @else
-                                                         @if($att->attend_mark6==1)
+                                                         @if($att->attend_mark7==1)
                                                            <td>{{ $att->id }}</td>
                                                         <td style="background: Teal">{{ $att->Reg_No }}</td>
                                                         <td style="background: Teal">{{ $att->name }}</td>
@@ -84,12 +85,12 @@
                     @endforeach
                     </tbody>
                 </table>
-                  @if( $att->is_saved6==0)
+                  @if( $att->is_saved7==0)
                                          <button type="submit" class="btn btn-primary"> save</button>  
                                      @endif                    
                      </form>  
-                                     @if( $att->is_saved6==1)
-                                            <a href="{{ route('tharu6M3', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
+                                     @if( $att->is_saved7==1)
+                                            <a href="{{ route('tharu7M3', $att->id ) }}" class="btn btn-primary" title="Edit Atts">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true">reset</span>
                                         </a> 
                                      @endif
@@ -109,14 +110,14 @@
  <table class="table">
                     <thead>
                         <tr class="tr btn-dark">
-
                            
   <th>          
       
-                            @if( $att->is_saved6==1)
+                            @if( $att->is_saved7==1)
+                            
                             <form class="form-horizontal" method="post" action="{{ route('hour3m.index', $data->id ) }}" >  
         {{-- <label style="text-align: center;  position: relative ; left:3%" ><b>Hours :</b> :</label>
-        <input type="number"  name="name" placeholder="Enter lecture hours"  name="hour" minlength="1" maxlength="200"  max="10" min="1" required="true"  style="background-color:yellow; text-align: center;  position: relative ; left:3%" >    
+        <input type="number"  name="name" placeholder="Enter lecture hours"  name="hour" minlength="1" maxlength="200" max="10" min="1" required="true"  style="background-color:yellow; text-align: center;  position: relative ; left:3%" >    
        
         
         <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:26%  ">submit the attendance </button> --}}
@@ -135,7 +136,7 @@
             <option value = "other"> other </option>
         </select> 
         
-        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:7%  ">submit the attendance </button>      
+        <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:7%  ">submit the attendance </button>       
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </form> </th>
    
@@ -153,8 +154,5 @@
  
        
 @endsection
-
-
-
 
 
