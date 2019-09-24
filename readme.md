@@ -1,4 +1,4 @@
-<h1> Poison Information Management System </h1>
+<h1> Attendance Management System </h1>
 
 <p> This is a Web application for Jaffna university CS department to attendance marking and manage.
 
