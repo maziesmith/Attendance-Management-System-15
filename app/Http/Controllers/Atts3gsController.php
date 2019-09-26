@@ -134,7 +134,8 @@ class Atts3gsController extends Controller
       public function view($id,Request $request)
     {
         $atts = atts_3gs::paginate(100);
-        $SingleData = atts_3gs::findOrFail(1);
+        
+        $SingleData =  DB::table('atts_3gs')->first();
             
         $keyword = $request->get('search');
             
@@ -143,7 +144,6 @@ class Atts3gsController extends Controller
             ->where('Level','=', "2S")->first();
         
         $data = table__course__g__student::findOrFail($id);
-        
         
                 
         if (!empty($keyword)) {

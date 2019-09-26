@@ -20,7 +20,7 @@ class Atts4SmController extends Controller
         $mutable = Carbon::now();
         
         $att4s = att4s::paginate(100);
-        $SingleData = att4s::findOrFail(1);
+       $SingleData =  DB::table('atts_4s')->first();
             
         $keyword = $request->get('search');
             

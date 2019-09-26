@@ -21,7 +21,7 @@ use Carbon\Carbon;
     public function view($id,Request $request)
     {
         $atts = atts_1::paginate(100);
-        $SingleData = atts_1::findOrFail(1);
+         $SingleData =  DB::table('atts_1s')->first();
             
         $keyword = $request->get('search');
             

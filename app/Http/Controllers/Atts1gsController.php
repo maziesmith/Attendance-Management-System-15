@@ -564,7 +564,7 @@ class Atts1gsController extends Controller
      public function view($id,Request $request)
     {
         $atts = atts_1gs::paginate(100);
-        $SingleData = atts_1gs::findOrFail(1);
+        $SingleData =  DB::table('atts_1gs')->first();
             
         $keyword = $request->get('search');
             
