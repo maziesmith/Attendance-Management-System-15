@@ -131,7 +131,8 @@ class Atts3msController extends Controller
      public function view($id,Request $request)
     {
         $atts = atts_3ms::paginate(100);
-        $SingleData = atts_3ms::findOrFail(1);
+        
+         $SingleData =  DB::table('atts_3ms')->first();
             
         $keyword = $request->get('search');
             

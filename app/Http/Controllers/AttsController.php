@@ -52,7 +52,7 @@ use Carbon\Carbon;
     public function view($id,Request $request)
     {
         $atts = att::paginate(100);
-        $SingleData = att::findOrFail(1);
+      $SingleData =  DB::table('atts')->first();
             
         $keyword = $request->get('search');
             

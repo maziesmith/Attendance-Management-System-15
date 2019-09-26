@@ -1,4 +1,4 @@
-<h3> Poor attendance student for course in {{$level1->level}}  </h3>
+<h3> Poor attendance for course in {{$level1->level}}  </h3>
          
  
                 <table class="table">

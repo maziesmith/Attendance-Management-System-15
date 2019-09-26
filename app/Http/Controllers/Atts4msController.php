@@ -135,7 +135,7 @@ class Atts4msController extends Controller
      public function view($id,Request $request)
     {
         $atts = atts_4ms::paginate(100);
-        $SingleData = atts_4ms::findOrFail(1);
+         $SingleData =  DB::table('atts_4ms')->first();
             
         $keyword = $request->get('search');
             
