@@ -49,7 +49,7 @@
         <button class="btn btn-primary" type="submit" name="submit2"  style="position: relative ; left:6%  ">Change  </button>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 
-                 <a href="{{route('att3s.att3.summary')}}" class="btn btn-success" title="get the back up" style="position: relative ; left:39%">
+                 <a href="{{ url('/summary')}}" class="btn btn-success" title="get the back up" style="position: relative ; left:39%">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true">Summary </span>
                                             
                                            <a href="{{route('atts.att3S.backup')}}" class="btn btn-success" title="get the back up" style="position: relative ; left:22%">

@@ -37,9 +37,19 @@
 
 <section class="our-webcoderskull padding-lg">
   <div class="container">
-    <div class="row heading heading-icon">
-        <h2>Admin Panel</h2>
-    </div>
+      
+
+     @if(session()->has('message'))
+      <div class="alert alert-success">
+          {{ session()->get('message')}}
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+    @endif
+      
     <ul class="row">
 
     <li class="col-12 col-md-6 col-lg-6">
@@ -86,15 +96,32 @@
             
           </div>
       </li>
-      <li class="col-12 col-md-6 col-lg-6">
+     
+      
+         <li class="col-12 col-md-6 col-lg-6">
           <div class="cnt-block equal-hight" style="height: 100px;">
             
-            <h3><a href="{{ url('/updateS') }}">Reset Table</a></h3>
+            <h3><a href="{{ url('/summary')}}">Summary</a></h3>
             
           </div>
       </li>
       
+         <li class="col-12 col-md-6 col-lg-6">
+          <div class="cnt-block equal-hight" style="height: 100px;">
+            
+            <h3><a href="{{ url('/backupDetail')}}">Backup</a></h3>
+            
+          </div>
+      </li>
       
+       <li class="col-12 col-md-6 col-lg-6">
+          <div class="cnt-block equal-hight" style="height: 100px;">
+            
+            <h3><a href="{{route('3s_sub1_reset1.3s_sub1_reset1.resetLevel') }}" onclick="return confirm(&quot;Reset the all subjects in this level?&quot;)" >Reset Table</a></h3>
+            
+          </div>
+      </li>
+     
     </ul>
   </div>
 </section>

@@ -1,10 +1,10 @@
 
 <br>From: Head/ Department of Computer Science.
-<br><br>19 March 2019<br>
+<br><br>{{$detail->DateToday}}<br>
 <br>To:		Dean/ Faculty of Science<br>
 
 <hr><br>
-<h3 align="center"><u>REPORTING POOR ATTENDANCE (Semester -  II) – ECE – 2017 (until 29/03/2019)</u></h3>
+<h3 align="center"><u>REPORTING POOR ATTENDANCE ({{$detail->Semester}})  ECE – {{$detail->ECE}} (until {{$detail->AttendanceDate}})</u></h3>
 
 
 @if (count( $summary1s) > 0) 
@@ -1024,6 +1024,6 @@
                     @endif
                                        
 <br>--------------------------------<br>
-Dr. A. Ramanan<br>
+{{$detail->DepartmentHead}}<br>
 Head/ Department of Science<br>
                                     
