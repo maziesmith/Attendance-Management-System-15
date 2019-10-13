@@ -512,24 +512,145 @@ use Carbon\Carbon;
     
       public function reset1()
     {
-        $level = DB::table('Level')
-          ->where('id','=', "1")->first();
-           
-          $level1 = DB::table('Level')
-         ->where('id','=', "2")->first();
-          
-          $level2 = DB::table('Level')
-         ->where('id','=', "3")->first();
-          
-          $level3 = DB::table('Level')
-          ->where('id','=', "4")->first();
-
-          $items = DB::table('precentages')
-             ->select('precentage')
-             ->where('Level','=', "2S")->first();
-         
-          $tableCourseSStudentsObjects = table__course__s__students::where('Level', '=', "3S") ->latest()->paginate(60);
-
+            DB::table('atts_1s')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend4' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend5' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend6' => 0]);
+            DB::table('atts_1s')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_1s')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_1s')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_1s')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_1s')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_1s')
+               ->update(['is_saved7' => 0]);
+             
+             
+             
+             
+            DB::table('atts')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend4' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend5' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend6' => 0]);
+            DB::table('atts')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts')
+               ->update(['lectureattend7' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts')
+               ->update(['is_saved' => 0]);
+             DB::table('atts')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts')
+               ->update(['is_saved7' => 0]);
+        
+             
+             
             DB::table('atts_3s')
                ->update(['nooflectures' => 0]);
             DB::table('atts_3s')
@@ -596,14 +717,434 @@ use Carbon\Carbon;
                ->update(['is_saved6' => 0]);
              DB::table('atts_3s')
                ->update(['is_saved7' => 0]);
-        
-             return view('Reset_Table/Update_Semester2', compact('tableCourseSStudentsObjects','items','level','level1','level2','level3'));
+             
+             
+              DB::table('atts_4s')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend4' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend5' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend6' => 0]);
+            DB::table('atts_4s')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_4s')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_4s')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_4s')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_4s')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_4s')
+               ->update(['is_saved7' => 0]);
+             
+             
+                   DB::table('atts_1gs')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_1gs')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_1gs')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_1gs')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend3' => 0]);
+             DB::table('atts_1gs')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend4' => 0]);
+             DB::table('atts_1gs')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend5' => 0]);
+             DB::table('atts_1gs')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend6' => 0]);
+            DB::table('atts_1gs')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_1gs')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_1gs')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_1gs')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_1gs')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_1gs')
+               ->update(['is_saved7' => 0]);
+         
+             
+               DB::table('atts_2gs')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_2gs')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_2gs')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_2gs')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts_2gs')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend4' => 0]); 
+             DB::table('atts_2gs')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend5' => 0]);
+              DB::table('atts_2gs')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend6' => 0]);
+            DB::table('atts_2gs')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_2gs')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_2gs')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_2gs')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_2gs')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_2gs')
+               ->update(['is_saved7' => 0]);
+         
+           DB::table('atts_3gs')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_3gs')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_3gs')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_3gs')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend3' => 0]);
+           DB::table('atts_3gs')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend4' => 0]);
+           
+            DB::table('atts_3gs')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend5' => 0]);
+           
+            DB::table('atts_3gs')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend6' => 0]);
+            
+              
+            DB::table('atts_3gs')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_3gs')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_3gs')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_3gs')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_3gs')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_3gs')
+               ->update(['is_saved7' => 0]);
+         
+           
+            
+              DB::table('atts_3ms')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_3ms')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_3ms')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_3ms')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts_3ms')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend4' => 0]);
+            DB::table('atts_3ms')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend5' => 0]);
+            DB::table('atts_3ms')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend6' => 0]);
+            
+              
+            DB::table('atts_3ms')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_3ms')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_3ms')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved7' => 0]);
+         
+             
+                DB::table('atts_4ms')
+               ->update(['nooflectures' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend' => 0]);
+            DB::table('atts_4ms')
+               ->update(['nooflectures1' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend1' => 0]);
+            DB::table('atts_4ms')
+               ->update(['nooflectures2' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend2' => 0]);
+            DB::table('atts_4ms')
+               ->update(['nooflectures3' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend3' => 0]);
+            DB::table('atts_4ms')
+               ->update(['nooflectures4' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend4' => 0]);
+            DB::table('atts_4ms')
+               ->update(['nooflectures5' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend5' => 0]);
+            DB::table('atts_4ms')
+               ->update(['nooflectures6' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend6' => 0]);
+              DB::table('atts_4ms')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_4ms')
+               ->update(['lectureattend7' => 0]);
+              
+            DB::table('atts_3ms')
+               ->update(['nooflectures7' => 0]);
+            DB::table('atts_3ms')
+               ->update(['lectureattend7' => 0]);
+             DB::table('atts_3ms')
+               ->update(['attend_mark' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark1' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark2' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark3' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark4' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark5' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark6' => 0]);
+            DB::table('atts_3ms')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_3ms')
+               ->update(['attend_mark7' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved1' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved2' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved3' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved4' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved5' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved6' => 0]);
+             DB::table('atts_3ms')
+               ->update(['is_saved7' => 0]);
+  
+             return redirect()-> back()->with('message', 'Successfully reset the old data!');
     }
     
     
     //Get summary for Level
-     public function Subject_Level()
+     public function Subject_Level(Request $request)
     {     
+          $detail=$request;
              $items = DB::table('precentages')
              ->select('precentage')
              ->where('Level','=', "2S")->first();
@@ -969,7 +1510,7 @@ use Carbon\Carbon;
             
      
            
-                 $pdf = PDF::loadView('Summery.table_2_sub.Level', compact('items',
+                 $pdf = PDF::loadView('Summery.table_2_sub.Level', compact('items','detail',
                          'data3s_8','data3s_1','data3s_2','data3s_3','data3s_4', 'data3s_5','data3s_6','data3s_7','level3','summary3s','atts_3s',
                          'data2s_8','data2s_1','data2s_2','data2s_3','data2s_4','data2s_5','data2s_6','data2s_7','level2','summary2s', 'atts_2s',
                          'data1s_8','data1s_1','data1s_2','data1s_3','data1s_4','data1s_5','data1s_6','data1s_7','level1','summary1s', 'atts_1s',
@@ -981,54 +1522,318 @@ use Carbon\Carbon;
                          'data4m_8','data4m_1','data4m_2','data4m_3','data4m_4','data4m_5','data4m_6','data4m_7','level9','summary4m', 'atts_4m'
                          ))
                          ->setPaper('a4', 'landscape');
-                 return $pdf->stream('Summmary Level.pdf');
+                 return $pdf->stream('Summmary.pdf');
                 
      }  
      
-      public function Backup()
+      public function Backup(Request $request)
      {
-        $atts = atts_3s::paginate(100);
-        $items = DB::table('precentages')
-         ->select('precentage')
-         ->where('Level','=', "2S")->first();
-        
-        $data=DB::table('table__course__s__students')
-                ->where('id','=', "19")->first();
-        
-        $data1=DB::table('table__course__s__students')
-                ->where('id','=', "18")->first();
-           
-        $data2=DB::table('table__course__s__students')
-                ->where('id','=', "17")->first();   
-        
-        $data3=DB::table('table__course__s__students')
-                ->where('id','=', "16")->first();
-        
-        $data4=DB::table('table__course__s__students')
-                ->where('id','=', "15")->first();
-       
-        $data5=DB::table('table__course__s__students')
-                ->where('id','=', "14")->first();
-        
-        $data6=DB::table('table__course__s__students')
-                ->where('id','=', "13")->first();
-        
-        $data7=DB::table('table__course__s__students')
-                ->where('id','=', "12")->first();
-        
-        $leve = DB::table('Level')
+             $detail=$request;
+             $items = DB::table('precentages')
+             ->select('precentage')
+             ->where('Level','=', "2S")->first();
+             
+             $level1 = DB::table('Level')
+                    ->where('id','=', "1")->first();             
+             $level2 = DB::table('Level')
+                    ->where('id','=', "2")->first();
+             $level3 = DB::table('Level')
                     ->where('id','=', "3")->first();
+             $level4 = DB::table('Level')
+                    ->where('id','=', "4")->first();             
+             $level5 = DB::table('Level')
+                    ->where('id','=', "5")->first();
+             $level6 = DB::table('Level')
+                    ->where('id','=', "6")->first();
+             $level7 = DB::table('Level')
+                    ->where('id','=', "7")->first();             
+             $level8 = DB::table('Level')
+                    ->where('id','=', "8")->first();
+             $level9 = DB::table('Level')
+                    ->where('id','=', "9")->first();
+
+             
+             $atts_1s = DB::table('atts_1s')->first();
+                  
+             $atts_2s = DB::table('atts')->first();
+                 
+             $atts_3s = DB::table('atts_3s')->first();
+                 
+             $atts_4s = DB::table('atts_4s')->first();
+                   
+             $atts_1g = DB::table('atts_1gs')->first();
+                 
+             $atts_2g = DB::table('atts_2gs')->first();
+             
+             $atts_3g = DB::table('atts_3gs')->first();
+                    
+             $atts_3m = DB::table('atts_3ms')->first();
+                   
+             $atts_4m = DB::table('atts_4ms')->first();
+         
+             $summary1s= DB::table('atts_1s')->get();
+                    
+             $summary2s= DB::table('atts')->get();
+                    
+             $summary3s= DB::table('atts_3s')->get();
+                 
+             
+             $summary4s= DB::table('atts_4s')->get();
+                    
+             
+             $summary1g= DB::table('atts_1gs')->get();
+                    
+             $summary2g= DB::table('atts_2gs')->get();
+                   
+             $summary3g= DB::table('atts_3gs')->get();
+                  
+             $summary3m= DB::table('atts_3ms')->get();
+                   
+             $summary4m= DB::table('atts_4ms')->get();
+                
+            $data1s_1=DB::table('table__course__s__students')
+                    ->where('id','=', "45")->first();             
+                         
+            $data1s_2=DB::table('table__course__s__students')
+                    ->where('id','=', "44")->first();
+               
+            $data1s_3=DB::table('table__course__s__students')
+                    ->where('id','=', "43")->first();   
             
-        
-        
-        $SingleData = atts_3s::findOrFail(1);   
+            $data1s_4=DB::table('table__course__s__students')
+                    ->where('id','=', "42")->first();
+            
+            $data1s_5=DB::table('table__course__s__students')
+                    ->where('id','=', "39")->first();
+           
+            $data1s_6=DB::table('table__course__s__students')
+                    ->where('id','=', "38")->first();
+            
+            $data1s_7=DB::table('table__course__s__students')
+                    ->where('id','=', "37")->first();                    
+            
+            $data1s_8=DB::table('table__course__s__students')
+                    ->where('id','=', "46")->first(); 
+             
+             
+            $data2s_1=DB::table('table__course__s__students')
+                    ->where('id','=', "35")->first();
+            
+            $data2s_2=DB::table('table__course__s__students')
+                    ->where('id','=', "31")->first();
+               
+            $data2s_3=DB::table('table__course__s__students')
+                    ->where('id','=', "27")->first();   
+            
+            $data2s_4=DB::table('table__course__s__students')
+                    ->where('id','=', "25")->first();
+            
+            $data2s_5=DB::table('table__course__s__students')
+                    ->where('id','=', "24")->first();
+           
+            $data2s_6=DB::table('table__course__s__students')
+                    ->where('id','=', "23")->first();
+            
+            $data2s_7=DB::table('table__course__s__students')
+                    ->where('id','=', "22")->first();                    
+            
+            $data2s_8=DB::table('table__course__s__students')
+                    ->where('id','=', "21")->first();         
+            
+ 
+            $data3s_1=DB::table('table__course__s__students')
+                    ->where('id','=', "19")->first();
+            
+            $data3s_2=DB::table('table__course__s__students')
+                    ->where('id','=', "18")->first();
+               
+            $data3s_3=DB::table('table__course__s__students')
+                    ->where('id','=', "17")->first();   
+            
+            $data3s_4=DB::table('table__course__s__students')
+                    ->where('id','=', "16")->first();
+            
+            $data3s_5=DB::table('table__course__s__students')
+                    ->where('id','=', "15")->first();
+           
+            $data3s_6=DB::table('table__course__s__students')
+                    ->where('id','=', "14")->first();
+            
+            $data3s_7=DB::table('table__course__s__students')
+                    ->where('id','=', "13")->first();
+            
+            $data3s_8=DB::table('table__course__s__students')
+                    ->where('id','=', "12")->first();
+           
+            
+            $data4s_1=DB::table('table__course__s__students')
+                    ->where('id','=', "11")->first();             
+                         
+            $data4s_2=DB::table('table__course__s__students')
+                    ->where('id','=', "10")->first();
+               
+            $data4s_3=DB::table('table__course__s__students')
+                    ->where('id','=', "9")->first();   
+            
+            $data4s_4=DB::table('table__course__s__students')
+                    ->where('id','=', "8")->first();
+            
+            $data4s_5=DB::table('table__course__s__students')
+                    ->where('id','=', "7")->first();
+           
+            $data4s_6=DB::table('table__course__s__students')
+                    ->where('id','=', "6")->first();
+            
+            $data4s_7=DB::table('table__course__s__students')
+                    ->where('id','=', "5")->first();                    
+            
+            $data4s_8=DB::table('table__course__s__students')
+                    ->where('id','=', "4")->first(); 
+            
+            
+            $data1g_1=DB::table('table__course__g__students')
+                    ->where('id','=', "1")->first();             
+                         
+            $data1g_2=DB::table('table__course__g__students')
+                    ->where('id','=', "2")->first();
+               
+            $data1g_3=DB::table('table__course__g__students')
+                    ->where('id','=', "3")->first();   
+            
+            $data1g_4=DB::table('table__course__g__students')
+                    ->where('id','=', "4")->first();
+            
+            $data1g_5=DB::table('table__course__g__students')
+                    ->where('id','=', "30")->first();
+           
+            $data1g_6=DB::table('table__course__g__students')
+                    ->where('id','=', "31")->first();
+            
+            $data1g_7=DB::table('table__course__g__students')
+                    ->where('id','=', "39")->first();                    
+            
+            $data1g_8=DB::table('table__course__g__students')
+                    ->where('id','=', "40")->first(); 
+            
+            
+            
+            $data2g_1=DB::table('table__course__g__students')
+                    ->where('id','=', "5")->first();             
+                         
+            $data2g_2=DB::table('table__course__g__students')
+                    ->where('id','=', "6")->first();
+               
+            $data2g_3=DB::table('table__course__g__students')
+                    ->where('id','=', "7")->first();   
+            
+            $data2g_4=DB::table('table__course__g__students')
+                    ->where('id','=', "8")->first();
+            
+            $data2g_5=DB::table('table__course__g__students')
+                    ->where('id','=', "33")->first();
+           
+            $data2g_6=DB::table('table__course__g__students')
+                    ->where('id','=', "34")->first();
+            
+            $data2g_7=DB::table('table__course__g__students')
+                    ->where('id','=', "43")->first();                    
+            
+            $data2g_8=DB::table('table__course__g__students')
+                    ->where('id','=', "44")->first(); 
+            
+            
+            
+            $data3g_1=DB::table('table__course__g__students')
+                    ->where('id','=', "22")->first();             
+                         
+            $data3g_2=DB::table('table__course__g__students')
+                    ->where('id','=', "24")->first();
+               
+            $data3g_3=DB::table('table__course__g__students')
+                    ->where('id','=', "25")->first();   
+            
+            $data3g_4=DB::table('table__course__g__students')
+                    ->where('id','=', "26")->first();
+            
+            $data3g_5=DB::table('table__course__g__students')
+                    ->where('id','=', "36")->first();
+           
+            $data3g_6=DB::table('table__course__g__students')
+                    ->where('id','=', "37")->first();
+            
+            $data3g_7=DB::table('table__course__g__students')
+                    ->where('id','=', "47")->first();                    
+            
+            $data3g_8=DB::table('table__course__g__students')
+                    ->where('id','=', "48")->first(); 
+            
+            
+            
+            $data3m_1=DB::table('table__course__g__students')
+                    ->where('id','=', "9")->first();             
+                         
+            $data3m_2=DB::table('table__course__g__students')
+                    ->where('id','=', "10")->first();
+               
+            $data3m_3=DB::table('table__course__g__students')
+                    ->where('id','=', "11")->first();   
+            
+            $data3m_4=DB::table('table__course__g__students')
+                    ->where('id','=', "12")->first();
+            
+            $data3m_5=DB::table('table__course__g__students')
+                    ->where('id','=', "27")->first();
+           
+            $data3m_6=DB::table('table__course__g__students')
+                    ->where('id','=', "28")->first();
+            
+            $data3m_7=DB::table('table__course__g__students')
+                    ->where('id','=', "29")->first();                    
+            
+            $data3m_8=DB::table('table__course__g__students')
+                    ->where('id','=', "45")->first(); 
+            
+           
+            $data4m_1=DB::table('table__course__g__students')
+                    ->where('id','=', "14")->first();             
+                         
+            $data4m_2=DB::table('table__course__g__students')
+                    ->where('id','=', "15")->first();
+               
+            $data4m_3=DB::table('table__course__g__students')
+                    ->where('id','=', "17")->first();   
+            
+            $data4m_4=DB::table('table__course__g__students')
+                    ->where('id','=', "18")->first();
+            
+            $data4m_5=DB::table('table__course__g__students')
+                    ->where('id','=', "19")->first();
+           
+            $data4m_6=DB::table('table__course__g__students')
+                    ->where('id','=', "20")->first();
+            
+            $data4m_7=DB::table('table__course__g__students')
+                    ->where('id','=', "21")->first();                    
+            
+            $data4m_8=DB::table('table__course__g__students')
+                    ->where('id','=', "46")->first();
+            
+     
+           
+                 $pdf = PDF::loadView('BackUp.table_2.Level2', compact('items','detail',
+                         'data3s_8','data3s_1','data3s_2','data3s_3','data3s_4', 'data3s_5','data3s_6','data3s_7','level3','summary3s','atts_3s',
+                         'data2s_8','data2s_1','data2s_2','data2s_3','data2s_4','data2s_5','data2s_6','data2s_7','level2','summary2s', 'atts_2s',
+                         'data1s_8','data1s_1','data1s_2','data1s_3','data1s_4','data1s_5','data1s_6','data1s_7','level1','summary1s', 'atts_1s',
+                         'data4s_8','data4s_1','data4s_2','data4s_3','data4s_4','data4s_5','data4s_6','data4s_7','level4','summary4s', 'atts_4s',
+                          'data1g_8','data1g_1','data1g_2','data1g_3','data1g_4','data1g_5','data1g_6','data1g_7','level5','summary1g', 'atts_1g',
+                         'data2g_8','data2g_1','data2g_2','data2g_3','data2g_4','data2g_5','data2g_6','data2g_7','level6','summary2g', 'atts_2g',
+                         'data3g_8','data3g_1','data3g_2','data3g_3','data3g_4','data3g_5','data3g_6','data3g_7','level7','summary3g', 'atts_3g',
+                         'data3m_8','data3m_1','data3m_2','data3m_3','data3m_4','data3m_5','data3m_6','data3m_7','level8','summary3m', 'atts_3m',
+                         'data4m_8','data4m_1','data4m_2','data4m_3','data4m_4','data4m_5','data4m_6','data4m_7','level9','summary4m', 'atts_4m'
+                         ))
+                         ->setPaper('a4', 'landscape');
+                         return $pdf->stream('Backup.pdf');
        
-        
-        $pdf = PDF::loadView('BackUp.table_2.Level2', compact('atts','items','SingleData','data',
-                'data1','data2','data3','data4','data5','data6','data7','leve'))
-                ->download('BackUP Level.pdf');
-        return view('BackUp.table_2.Level2',compact('atts','items','data','data1','data2',
-                'data3','data4','data5','data6','data7','SingleData','leve'));
      }
  }
  

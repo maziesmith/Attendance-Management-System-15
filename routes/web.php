@@ -11,12 +11,27 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/Final_Sumarry_Report', 'Atts3smController@Subject_Level');
+
+Route::post('/Final_Backup_Report', 'Atts3smController@Backup');
+
 Route::group(['middleware'=>'AuthenticateMiddleware'],function(){
 
+    Route::get('/summary', function () {
+    return view('Summery/summeryDetail');
+});
+
+
+    Route::get('/backupDetail', function () {
+    return view('Backup/backupDetail');
+});
+    
 // after the acdamic year update root;
 Route::get('/update', function () {
     return view('Reset_Table/Update_New_Year');
 });
+
 
 
 //after the semester update root;
